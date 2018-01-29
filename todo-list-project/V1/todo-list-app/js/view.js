@@ -38,7 +38,7 @@
 
 
 	/**
-	 * [_clearCompletedButton description]
+	 * Masque les éléments terminés
 	 * @param  {number} (completedCount) Le nombre d' élément coché
 	 * @param  {bolean} (visible) True si visible, false sinon
 	 */
@@ -120,7 +120,7 @@
 		qsa('label', listItem).forEach(function (label) {
 			label.textContent = title;
 		});
-		console.log(`_editItemDone(), ID : ` + id);
+		//console.log(`_editItemDone(), ID : ` + id);
 	};
 
 
@@ -134,47 +134,47 @@
 		var viewCommands = {
 			showEntries: function () {
 				self.$todoList.innerHTML = self.template.show(parameter);
-				console.log('render.showEntries()');
+				//console.log('render.showEntries()');
 			},
 			removeItem: function () {
 				self._removeItem(parameter);
-				console.log('render.removeItem()' + parameter);
+				//console.log('render.removeItem()' + parameter);
 			},
 			updateElementCount: function () {
 				self.$todoItemCounter.innerHTML = self.template.itemCounter(parameter);
-				console.log('render.updateElementCount()');
+				//console.log('render.updateElementCount()');
 			},
 			clearCompletedButton: function () {
 				self._clearCompletedButton(parameter.completed, parameter.visible);
-				console.log('render.clearCompletedButton()');
+				//console.log('render.clearCompletedButton()');
 			},
 			contentBlockVisibility: function () {
 				self.$main.style.display = self.$footer.style.display = parameter.visible ? 'block' : 'none';
-				console.log('render.contentBlockVisibility()');
+				//console.log('render.contentBlockVisibility()');
 			},
 			toggleAll: function () {
 				self.$toggleAll.checked = parameter.checked;
-				console.log('render.toggleAll()');
+				//console.log('render.toggleAll()');
 			},
 			setFilter: function () {
 				self._setFilter(parameter);
-				console.log('render.setFilter()' + parameter);
+				//console.log('render.setFilter()' + parameter);
 			},
 			clearNewTodo: function () {
 				self.$newTodo.value = '';
-				console.log('render.clearNewTodo()');
+				//console.log('render.clearNewTodo()');
 			},
 			elementComplete: function () {
 				self._elementComplete(parameter.id, parameter.completed);
-				console.log('render.elementComplete()');
+				//console.log('render.elementComplete()');
 			},
 			editItem: function () {
 				self._editItem(parameter.id, parameter.title);
-				console.log('render.editItem()');
+				//console.log('render.editItem()');
 			},
 			editItemDone: function () {
 				self._editItemDone(parameter.id, parameter.title);
-				console.log('render.editItemDone()');
+				//console.log('render.editItemDone()');
 			}
 		};
 
@@ -193,7 +193,7 @@
 
 
 	/**
-	 * [_bindItemEditDone description]
+	 * EventListener sur la validation de l' édition d'un élément
 	 * @param  {function} (handler) Un callback exécuté sous condition
 	 */
 	View.prototype._bindItemEditDone = function (handler) {
@@ -217,7 +217,7 @@
 
 
 	/**
-	 * [_bindItemEditCancel description]
+	 * EventListener sur l' annulation de l' édition d'un élément
 	 * @param  {function} (handler) Un callback exécuté sous condition
 	 */
 	View.prototype._bindItemEditCancel = function (handler) {
@@ -234,7 +234,7 @@
 
 
 	/**
-	 * [bind description]
+	 * Fait le lien entre les méthodes du controller (controller.js) et les éléments de view (view.js)
 	 * @param  {function} (event)   L' évenement actif
 	 * @param  {function} (handler) Un callback exécuté sous condition
 	 */
@@ -279,7 +279,7 @@
 		} else if (event === 'itemEditCancel') {
 			self._bindItemEditCancel(handler);
 		}
-		console.log(`bind()` + event + handler);
+		//console.log(`bind()` + event + handler);
 	};
 
 
