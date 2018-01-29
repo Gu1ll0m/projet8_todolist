@@ -1,6 +1,7 @@
 (function (window) {
 	'use strict';
 
+
 	/**
 	 * Le controller permet l' interaction entre model.js et view.js
 	 *
@@ -46,6 +47,7 @@
 		});
 	}
 
+
 	/**
 	 * Charge et initialise view
 	 *
@@ -55,8 +57,8 @@
 		var route = locationHash.split('/')[1];
 		var page = route || '';
 		this._updateFilterState(page);
-		console.log(`Controller.prototype.setView`);
 	};
+
 
 	/**
 	 * Obtient tous les éléments et les affiche dans le todo-list
@@ -66,8 +68,8 @@
 		self.model.read(function (data) {
 			self.view.render('showEntries', data);
 		});
-		console.log(`Controller.prototype.showAll`);
 	};
+
 
 	/**
 	 * Retourne toutes les tâches en cours
@@ -77,8 +79,8 @@
 		self.model.read({ completed: false }, function (data) {
 			self.view.render('showEntries', data);
 		});
-		console.log(`Controller.prototype.showEntries`);
 	};
+
 
 	/**
 	 * Retourne toutes les tâches terminées
@@ -88,8 +90,8 @@
 		self.model.read({ completed: true }, function (data) {
 			self.view.render('showEntries', data);
 		});
-		console.log(`Controller.prototype.showCompleted`);
 	};
+
 
 	/**
 	 * un événement à déclencher lorsque vous souhaitez ajouter un élément. Il suffit de passer
@@ -106,8 +108,8 @@
 			self.view.render('clearNewTodo');
 			self._filter(true);
 		});
-		console.log(`Controller.prototype.addItem`);
 	};
+
 
 	/*
 	 * Déclenche le mode d'édition d'élément.
@@ -117,8 +119,8 @@
 		self.model.read(id, function (data) {
 			self.view.render('editItem', {id: id, title: data[0].title});
 		});
-		console.log(`Controller.prototype.editItem`);
 	};
+
 
 	/*
 	 * Termine le mode d'édition d'élément avec succès.
@@ -141,8 +143,9 @@
 		} else {
 			self.removeItem(id);
 		}
-		console.log(`Controller.prototype.editItemSave`);
+		console.log("Element with ID: " + id + " has been edit.");
 	};
+
 
 	/*
 	 * Annule le mode d'édition d'élément.
@@ -152,8 +155,8 @@
 		self.model.read(id, function (data) {
 			self.view.render('editItemDone', {id: id, title: data[0].title});
 		});
-		console.log(`Controller.prototype.itemEditCancel`);
 	};
+
 
 	/**
 	 * Supprime un élément de la liste
@@ -178,8 +181,8 @@
 		});
 
 		self._filter();
-		console.log(`Controller.prototype.removeItem`);
 	};
+
 
 	/**
 	 * Supprime tous les éléments terminés.
@@ -193,8 +196,8 @@
 		});
 
 		self._filter();
-		console.log(`Controller.prototype.removeCompletedItems`);
 	};
+
 
 	/**
 	 * Met à jour l' affichage des éléments en focntion de leur état
@@ -215,8 +218,8 @@
 		if (!silent) {
 			self._filter();
 		}
-		console.log(`Controller.prototype.toggleComplete`);
 	};
+
 
 	/**
 	 * Permet de basculer l' activation / désactivation des cases à cocher.
@@ -230,8 +233,8 @@
 		});
 
 		self._filter();
-		console.log(`Controller.prototype.toggleAll`);
 	};
+
 
 	/**
 	 * Met à jour les parties de la page qui changent en fonction du nombre restant de todos.
@@ -248,11 +251,11 @@
 			self.view.render('toggleAll', {checked: todos.completed === todos.total});
 			self.view.render('contentBlockVisibility', {visible: todos.total > 0});
 		});
-		console.log(`Controller.prototype._updateCount`);
 	};
 
+
 	/**
-	 * Re-filtre les éléments de la todo en fonction de l'itinéraire actif.
+	 * Filtre les éléments de la todo en fonction de l'itinéraire actif.
 	 * @param {boolean|undefined} (force)  forces a re-painting of todo items.
 	 */
 	Controller.prototype._filter = function (force) {
@@ -269,11 +272,12 @@
 		}
 
 		this._lastActiveRoute = activeRoute;
-		console.log(`Controller.prototype._filter`);
 	};
+
 
 	/**
 	 * Met à jour les routes dans url
+	 * @param  {string} (currentPage) La page actuelle '' || active || completed
 	 */
 	Controller.prototype._updateFilterState = function (currentPage) {
 		// Stockez une référence à la route active, ce qui nous permet de filtrer à nouveau
@@ -287,8 +291,8 @@
 		this._filter();
 
 		this.view.render('setFilter', currentPage);
-		console.log(`Controller.prototype._updateFilterState`);
 	};
+
 
 	// Exportez vers Window
 	window.app = window.app || {};
