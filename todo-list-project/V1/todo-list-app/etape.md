@@ -48,13 +48,26 @@
 Technique de création de l'ID ne vérifie pas si le nouvel ID existe déjà : risque d' avoir plusieurs éléments avec le même ID.
 
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
-Suppression de la boucle suivante :
 
-    items.forEach(function(item) {
+    Controller.prototype.removeItem = function (id) {
+      var self = this;
+      var items;
+      self.model.read(function(data) {
+        items = data;
+      });
+
+      items.forEach(function(item) {
         if (item.id === id) {
-            console.log("Element with ID: " + id + " has been removed.");
+          console.log("Element with ID: " + id + " has been removed.");
         }
-    });
+      });
+
+      self.model.remove(id, function () {
+        self.view.render('removeItem', id);
+      });
+
+      self._filter();
+  };
 
 Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant.
 Notre fonction devient :
@@ -63,12 +76,12 @@ Notre fonction devient :
         var self = this;
         var items;
         self.model.read(function(data) {
-            items = data;
+          items = data;
         });
 
         self.model.remove(id, function () {
-            self.view.render('removeItem', id);
-            console.log("Element with ID: " + id + " has been removed.");
+          self.view.render('removeItem', id);
+          console.log("Element with ID: " + id + " has been removed.");
         });
 
         self._filter();
