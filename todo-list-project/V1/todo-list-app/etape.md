@@ -3,9 +3,47 @@
 
 2. bug 2 : création des ID dans store.js => Store.prototype.save
 
-    for (var i = 0; i < 6; i++) {
+  Store.prototype.save = function (updateData, callback, id) {
+    var data = JSON.parse(localStorage[this._dbName]);
+    var todos = data.todos;
+
+    callback = callback || function () {};
+
+    // Générer un identifiant
+      var newId = "";
+      var charset = "0123456789";
+
+        for (var i = 0; i < 6; i++) {
         newId += charset.charAt(Math.floor(Math.random() * charset.length));
+        // si newId exist nouveau random
+        // newId = Id +1
+        console.log(newId);
     }
+
+    // Si un ID a été donné, trouve l'élément et mets à jour chaque propriétés
+    if (id) {
+      for (var i = 0; i < todos.length; i++) {
+        if (todos[i].id === id) {
+          for (var key in updateData) {
+            todos[i][key] = updateData[key];
+          }
+          break;
+        }
+      }
+
+      localStorage[this._dbName] = JSON.stringify(data);
+      callback.call(this, todos);
+    } else {
+
+        // Attribuer un ID
+      updateData.id = parseInt(newId);
+      todos.push(updateData);
+      localStorage[this._dbName] = JSON.stringify(data);
+      callback.call(this, [updateData]);
+    }
+  };
+
+
 
 Technique de création de l'ID ne vérifie pas si le nouvel ID existe déjà : risque d' avoir plusieurs éléments avec le même ID.
 
