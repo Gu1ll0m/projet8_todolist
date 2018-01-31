@@ -85,6 +85,9 @@
 
         for (var i = 0; i < 6; i++) {
      		newId += charset.charAt(Math.floor(Math.random() * charset.length));
+     		// si newId exist nouveau random
+     		// newId = Id +1
+     		console.log(newId);
 		}
 
 		// Si un ID a été donné, trouve l'élément et mets à jour chaque propriétés
