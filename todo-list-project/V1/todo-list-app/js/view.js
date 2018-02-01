@@ -125,56 +125,55 @@
 
 
 	/**
-	 * [render description]
-	 * @param  {string} viewCmd   La fonction active
-	 * @param  {object} parameter Les paramètres actifs
+	 * Retourne les éléments dans le DOM
+	 * @param  {string} (viewCmd)   La fonction active
+	 * @param  {object} (parameter) Les paramètres actifs
 	 */
 	View.prototype.render = function (viewCmd, parameter) {
 		var self = this;
 		var viewCommands = {
 			showEntries: function () {
 				self.$todoList.innerHTML = self.template.show(parameter);
-				//console.log('render.showEntries()');
 			},
+
 			removeItem: function () {
 				self._removeItem(parameter);
-				//console.log('render.removeItem()' + parameter);
 			},
+
 			updateElementCount: function () {
 				self.$todoItemCounter.innerHTML = self.template.itemCounter(parameter);
-				//console.log('render.updateElementCount()');
 			},
+
 			clearCompletedButton: function () {
 				self._clearCompletedButton(parameter.completed, parameter.visible);
-				//console.log('render.clearCompletedButton()');
 			},
+
 			contentBlockVisibility: function () {
 				self.$main.style.display = self.$footer.style.display = parameter.visible ? 'block' : 'none';
-				//console.log('render.contentBlockVisibility()');
 			},
+
 			toggleAll: function () {
 				self.$toggleAll.checked = parameter.checked;
-				//console.log('render.toggleAll()');
 			},
+
 			setFilter: function () {
 				self._setFilter(parameter);
-				//console.log('render.setFilter()' + parameter);
 			},
+
 			clearNewTodo: function () {
 				self.$newTodo.value = '';
-				//console.log('render.clearNewTodo()');
 			},
+
 			elementComplete: function () {
 				self._elementComplete(parameter.id, parameter.completed);
-				//console.log('render.elementComplete()');
 			},
+
 			editItem: function () {
 				self._editItem(parameter.id, parameter.title);
-				//console.log('render.editItem()');
 			},
+
 			editItemDone: function () {
 				self._editItemDone(parameter.id, parameter.title);
-				//console.log('render.editItemDone()');
 			}
 		};
 
@@ -209,7 +208,7 @@
 
 		$delegate(self.$todoList, 'li .edit', 'keypress', function (event) {
 			if (event.keyCode === self.ENTER_KEY) {
-				// Retirez le curseur du bouton lorsque vous appuyez sur Entrée
+				// Retire le curseur du bouton lorsque l'on appuie sur Entrée
 				this.blur();
 			}
 		});
@@ -241,7 +240,7 @@
 	View.prototype.bind = function (event, handler) {
 		var self = this;
 		if (event === 'newTodo') {
-			$on(self.$newTodo, 'change', function () { // ajoute eventListener
+			$on(self.$newTodo, 'change', function () { // $on : ajoute eventListener
 				handler(self.$newTodo.value); // passe self.$newTodo.value au handler (contenu de l'input)
 			});
 
@@ -279,11 +278,10 @@
 		} else if (event === 'itemEditCancel') {
 			self._bindItemEditCancel(handler);
 		}
-		//console.log(`bind()` + event + handler);
 	};
 
 
-	// Exportez vers Window
+	// Exporte vers Window
 	window.app = window.app || {};
 	window.app.View = View;
 }(window));
