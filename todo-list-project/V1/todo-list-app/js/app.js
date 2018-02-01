@@ -21,6 +21,7 @@
 	/**
 	 * Ajoute la route dans l' url ''|| active || completed
 	 */
+
 	function setView() {
 		todo.controller.setView(document.location.hash);
 	}
