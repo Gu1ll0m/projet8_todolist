@@ -4,7 +4,6 @@
 
 	/**
 	 * Le controller permet l' interaction entre model.js et view.js
-	 *
 	 * @constructor
 	 * @param {object} (model) L' instance model
 	 * @param {object} (view) L' instance view
@@ -50,7 +49,6 @@
 
 	/**
 	 * Charge et initialise view
-	 *
 	 * @param {string} '' | 'active' | 'completed'
 	 */
 	Controller.prototype.setView = function (locationHash) {
@@ -94,7 +92,7 @@
 
 
 	/**
-	 * un événement à déclencher lorsque vous souhaitez ajouter un élément. Il suffit de passer
+	 * Evénement à déclencher lorsque vous souhaitez ajouter un élément. Il suffit de passer
 	 * dans l'objet événement et il va gérer l'insertion DOM et la sauvegarde du nouvel élément.
 	 */
 	Controller.prototype.addItem = function (title) { // correction erreur nom de fonction ici qui empêchait l' application de foncitonner
@@ -160,7 +158,6 @@
 
 	/**
 	 * Supprime un élément de la liste
-	 *
 	 * @param {number} (id) L'ID de l'élément à retirer du DOM et du stockage
 	 */
 	Controller.prototype.removeItem = function (id) {
@@ -196,7 +193,6 @@
 
 	/**
 	 * Met à jour l' affichage des éléments en focntion de leur état
-	 *
 	 * @param {number} (id) L'ID de l'élément à compléter ou incomplet
 	 * @param {object} (checkbox) La case à cocher pour validé l' état de l' élément
 	 * @param {boolean|undefined} (silent) Empêcher le re-filtrage des éléments de tâche
@@ -289,7 +285,7 @@
 	};
 
 
-	// Exportez vers Window
+	// Exporte vers Window
 	window.app = window.app || {};
 	window.app.Controller = Controller;
 })(window);
