@@ -50,7 +50,7 @@
 
 
 	/**
-	 * Recherchez le parent de l'élément avec le nom de tag : $parent(qs('a'), 'div');
+	 * Recherche le parent de l'élément avec le nom de tag : $parent(qs('a'), 'div');
 	 */
 	window.$parent = function (element, tagName) {
 		if (!element.parentNode) {
@@ -64,7 +64,7 @@
 
 
 	/**
-	 * Autorisez les boucle sur les nœuds : qsa('.foo').forEach(function () {})
+	 * Autorise les boucle sur les nœuds : qsa('.foo').forEach(function () {})
 	 */
 	NodeList.prototype.forEach = Array.prototype.forEach; // parcourir chaque noeuds revient à parcourir chaque tableau
 
