@@ -69,7 +69,7 @@ Technique de création de l'ID ne vérifie pas si le nouvel ID existe déjà : r
       self._filter();
   };
 
-Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant.
+Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
 Notre fonction devient :
 
     Controller.prototype.removeItem = function (id) {
