@@ -106,7 +106,7 @@
 	};
 
 
-	// Exportez vers Window
+	// Exporte vers Window
 	window.app = window.app || {};
 	window.app.Template = Template;
 })(window);
