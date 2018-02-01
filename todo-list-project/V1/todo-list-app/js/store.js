@@ -57,7 +57,7 @@
 
 
 	/**
-	 * Récupérera toutes les données
+	 * Récupére toutes les données
 	 * @param {function} (callback) La fonction de rappel lors de la récupération des données
 	 */
 	Store.prototype.findAll = function (callback) {
@@ -79,18 +79,15 @@
 
 		callback = callback || function () {};
 
-		// Générer un identifiant
+		// Génére un identifiant
 	    var newId = "";
 	    var charset = "0123456789";
 
-        for (var i = 0; i < 6; i++) {
+        for (var i = 0; i < 19 ; i++) {
      		newId += charset.charAt(Math.floor(Math.random() * charset.length));
-     		// si newId exist nouveau random
-     		// newId = Id +1
-     		console.log(newId);
 		}
 
-		// Si un ID a été donné, trouve l'élément et mets à jour chaque propriétés
+		// Si un ID a été donné, trouve l'élément et met à jour les propriétés
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
 				if (todos[i].id === id) {
@@ -105,7 +102,7 @@
 			callback.call(this, todos);
 		} else {
 
-    		// Attribuer un ID
+    		// Attribue un ID
 			updateData.id = parseInt(newId);
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
@@ -151,7 +148,7 @@
 	};
 
 
-	// Exportez vers Window
+	// Exporte vers Window
 	window.app = window.app || {};
 	window.app.Store = Store;
 })(window);
