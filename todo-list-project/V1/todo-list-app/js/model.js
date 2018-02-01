@@ -115,7 +115,7 @@
 	};
 
 
-	// Exportez vers Window
+	// Exporte vers Window
 	window.app = window.app || {};
 	window.app.Model = Model;
 })(window);
