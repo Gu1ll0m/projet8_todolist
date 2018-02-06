@@ -25,11 +25,11 @@ https://image.noelshack.com/fichiers/2018/06/2/1517918514-1er-todo.png
 
 Votre todo apparaît dans la liste des todos.
 Plusieurs éléments sont apparus :
-    - un icône à gauche de « what needs to be done ? »
-    - une indication du nombre de todos, ici « 1 item left »
-    - un onglet «all »
-    - un onglet « active »
-    - un onglet « completed »
++ un icône à gauche de « what needs to be done ? »
++ une indication du nombre de todos, ici « 1 item left »
++ un onglet «all »
++ un onglet « active »
++ un onglet « completed »
 
 Voyons maintenant comment modifier un todo.
 
