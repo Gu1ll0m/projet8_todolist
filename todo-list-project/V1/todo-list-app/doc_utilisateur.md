@@ -11,7 +11,7 @@ Nous vous proposons donc de voir comment réaliser les actions suivantes :
 5. supprimer un ou plusieurs  todos
 
 
-## Créer un Todo
+## 1. Créer un Todo
 
 Notre application se présente de la façon suivante.
 
@@ -34,7 +34,7 @@ Plusieurs éléments sont apparus :
 Voyons maintenant comment modifier un todo.
 
 
-## Modifier un Todo
+## 2. Modifier un Todo
 
 https://image.noelshack.com/fichiers/2018/06/2/1517918616-edit-todo.png
 
@@ -45,7 +45,7 @@ Le todo que vous modifié est encadré.
 Voyons  maintenant comment modifier l’ état d’ avancement d’un todo.
 
 
-## Modifier l’ état d’ avancement d’un todo
+## 3. Modifier l’ état d’ avancement d’un todo
 
 https://image.noelshack.com/fichiers/2018/06/2/1517918726-avancement-todo.png
 
@@ -56,7 +56,7 @@ Pour signifier que votre todo est terminé il suffit de cliquer dans le cercle �
 Une fois fait le todo est barré et un bouton « Clear completed » apparaît en bas à droite. Ce bouton sert à effacé le todo que l’on a indiqué comme terminé.
 
 
-## Voir l’état de nos todos
+## 4. Voir l’état de nos todos
 
 1. https://image.noelshack.com/fichiers/2018/06/2/1517918901-all-todo.png
 
@@ -71,7 +71,7 @@ Le bouton « Active » nous montre les Todos en cours.
 Le bouton « Completed » quand à lui nous montre les todos que nous avons terminé.
 
 
-## Supprimer un ou plusieurs todos
+## 5. Supprimer un ou plusieurs todos
 
 https://image.noelshack.com/fichiers/2018/06/2/1517919068-clearcompleted-todo.png
 
