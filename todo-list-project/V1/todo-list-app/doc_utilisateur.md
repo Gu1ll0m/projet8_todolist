@@ -4,11 +4,11 @@ Notre application a pour objectif de vous permettre très facilement de créer d
 Pour ce faire nous avons élaborer des fonctions permettant de créer, de modifier ou supprimer des éléments.
 Notre application doit être utilisable par tous, de 7 à 77 ans, sur tout type de support (ordinateur, tablette, smartphone,…)
 Nous vous proposons donc de voir comment réaliser les actions suivantes :
-    - créer un todo
-    - modifier un todo
-    - modifier l’ état d’ avancement d’un todo
-    - voir l’état de nos todos
-    - supprimer un ou plusieurs  todos
+    1. créer un todo
+    2. modifier un todo
+    3. modifier l’ état d’ avancement d’un todo
+    4. voir l’état de nos todos
+    5. supprimer un ou plusieurs  todos
 
 
 ## Créer un Todo
