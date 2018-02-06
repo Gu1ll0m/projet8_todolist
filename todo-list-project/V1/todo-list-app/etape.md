@@ -3,89 +3,126 @@
 
 2. bug 2 : création des ID dans store.js => Store.prototype.save
 
-  Store.prototype.save = function (updateData, callback, id) {
-    var data = JSON.parse(localStorage[this._dbName]);
-    var todos = data.todos;
+        Store.prototype.save = function (updateData, callback, id) {
+          var data = JSON.parse(localStorage[this._dbName]);
+          var todos = data.todos;
 
-    callback = callback || function () {};
+          callback = callback || function () {};
 
-    // Générer un identifiant
-      var newId = "";
-      var charset = "0123456789";
+          // Générer un identifiant
+            var newId = "";
+            var charset = "0123456789";
 
-        for (var i = 0; i < 6; i++) {
-        newId += charset.charAt(Math.floor(Math.random() * charset.length));
-        // si newId exist nouveau random
-        // newId = Id +1
-        console.log(newId);
-    }
-
-    // Si un ID a été donné, trouve l'élément et mets à jour chaque propriétés
-    if (id) {
-      for (var i = 0; i < todos.length; i++) {
-        if (todos[i].id === id) {
-          for (var key in updateData) {
-            todos[i][key] = updateData[key];
+              for (var i = 0; i < 6; i++) {
+              newId += charset.charAt(Math.floor(Math.random() * charset.length));
+              // si newId exist nouveau random
+              // newId = Id +1
+              console.log(newId);
           }
-          break;
-        }
-      }
 
-      localStorage[this._dbName] = JSON.stringify(data);
-      callback.call(this, todos);
-    } else {
+          // Si un ID a été donné, trouve l'élément et mets à jour chaque propriétés
+          if (id) {
+            for (var i = 0; i < todos.length; i++) {
+              if (todos[i].id === id) {
+                for (var key in updateData) {
+                  todos[i][key] = updateData[key];
+                }
+                break;
+              }
+            }
 
-        // Attribuer un ID
-      updateData.id = parseInt(newId);
-      todos.push(updateData);
-      localStorage[this._dbName] = JSON.stringify(data);
-      callback.call(this, [updateData]);
-    }
-  };
+            localStorage[this._dbName] = JSON.stringify(data);
+            callback.call(this, todos);
+          } else {
 
-
+              // Attribuer un ID
+            updateData.id = parseInt(newId);
+            todos.push(updateData);
+            localStorage[this._dbName] = JSON.stringify(data);
+            callback.call(this, [updateData]);
+          }
+        };
 
 Technique de création de l'ID ne vérifie pas si le nouvel ID existe déjà : risque d' avoir plusieurs éléments avec le même ID.
 
+        Store.prototype.save = function (updateData, callback, id) {
+          var data = JSON.parse(localStorage[this._dbName]);
+          var todos = data.todos;
+
+          callback = callback || function () {};
+
+          // Génére un identifiant
+            var newId = "";
+            var charset = "0123456789";
+
+              for (var i = 0; i < 19 ; i++) {
+              newId += charset.charAt(Math.floor(Math.random() * charset.length));
+          }
+
+          // Si un ID a été donné, trouve l'élément et met à jour les propriétés
+          if (id) {
+            for (var i = 0; i < todos.length; i++) {
+              if (todos[i].id === id) {
+                for (var key in updateData) {
+                  todos[i][key] = updateData[key];
+                }
+                break;
+              }
+            }
+
+            localStorage[this._dbName] = JSON.stringify(data);
+            callback.call(this, todos);
+          } else {
+
+              // Attribue un ID
+            updateData.id = parseInt(newId);
+            todos.push(updateData);
+            localStorage[this._dbName] = JSON.stringify(data);
+            callback.call(this, [updateData]);
+          }
+        };
+
+En augmentant la longueur de notre id random on élimine statistiquement la possibilité d' avoir plusieurs items avec le même id. Méthode que l'on peut améliorer.
+
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
 
-    Controller.prototype.removeItem = function (id) {
-      var self = this;
-      var items;
-      self.model.read(function(data) {
-        items = data;
-      });
+        Controller.prototype.removeItem = function (id) {
+          var self = this;
+          var items;
+          self.model.read(function(data) {
+            items = data;
+          });
 
-      items.forEach(function(item) {
-        if (item.id === id) {
-          console.log("Element with ID: " + id + " has been removed.");
-        }
-      });
+          items.forEach(function(item) {
+            if (item.id === id) {
+              console.log("Element with ID: " + id + " has been removed.");
+            }
+          });
 
-      self.model.remove(id, function () {
-        self.view.render('removeItem', id);
-      });
+          self.model.remove(id, function () {
+            self.view.render('removeItem', id);
+          });
 
-      self._filter();
-  };
+          self._filter();
+        };
 
 Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
 Notre fonction devient :
 
-    Controller.prototype.removeItem = function (id) {
-        var self = this;
-        var items;
-        self.model.read(function(data) {
-          items = data;
-        });
+        Controller.prototype.removeItem = function (id) {
+            var self = this;
+            var items;
+            self.model.read(function(data) {
+              items = data;
+            });
 
-        self.model.remove(id, function () {
-          self.view.render('removeItem', id);
-          console.log("Element with ID: " + id + " has been removed.");
-        });
+            self.model.remove(id, function () {
+              self.view.render('removeItem', id);
+              console.log("Element with ID: " + id + " has been removed.");
+            });
 
-        self._filter();
-    };
+            self._filter();
+        };
 
 
 ## ETAPE 2
@@ -99,6 +136,6 @@ Audit site concurrent => OK
 
 ## ETAPE 4
 documenter les éléments suivants :
-1. le projet lui-même (l'usage non technique) => à faire
-2. comment il fonctionne techniquement => à faire
-3. votre audit => à faire
+1. le projet lui-même (l'usage non technique) : doc utilisateur pdf + github => OK
+2. comment il fonctionne techniquement : doc technique via docdash => OK js/out/index.html
+
