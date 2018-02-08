@@ -196,7 +196,16 @@ Notre fonction devient :
 
 
 ## ETAPE 2
-test via Jasmine => à faire
+test via Jasmine => en cours
+1. #62 => test si on affiche bien model et setview : OK
+2. #92 => test si on affiche bien les todos de l'onglet active : OK
+3. #103 => test si on affiche bien les todos de l'onglet completed : OK
+4. #145 => test si "All" est surligné quand on a l' onglet défaut : en cours
+5. #149 => test si "Active" est surligné quand on change pour l'onglet active : en cours
+6. #153 => test si on bascule tous les états des todos vers terminé : en cours
+7. #158 => test la mise à jour des views : en cours
+8. #163 => test si on a bien le bon model en cas d' ajout d'un todo : en cours
+9. #204 => test si on supprime un todo du model : en cours
 
 ## ETAPE 3
 Audit site concurrent => OK
