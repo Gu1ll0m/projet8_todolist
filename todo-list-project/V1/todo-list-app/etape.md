@@ -84,6 +84,76 @@ Technique de création de l'ID ne vérifie pas si le nouvel ID existe déjà : r
 
 En augmentant la longueur de notre id random on élimine statistiquement la possibilité d' avoir plusieurs items avec le même id. Méthode que l'on peut améliorer.
 
+test avec :
+
+        Store.prototype.save = function (updateData, callback, id) {
+          var self = this;
+          var data = JSON.parse(localStorage[this._dbName]);
+          var todos = data.todos;
+
+          callback = callback || function () {};
+
+          // Si un ID a été donné, trouve l'élément et met à jour les propriétés
+          if (id) {
+            for (var i = 0; i < todos.length; i++) {
+              if (todos[i].id === id) {
+                for (var key in updateData) {
+                  todos[i].key = updateData[key];
+                }
+                break;
+              }
+            }
+
+            localStorage[this._dbName] = JSON.stringify(data);
+            callback.call(this, todos);
+
+          } else {
+
+            function generateNewId () {
+              // génère un nouvel id
+              var newId = "";
+                var charset = "0123456789";
+
+                  for (var i = 0; i < 19 ; i++) {
+                  newId += charset.charAt(Math.floor(Math.random() * charset.length));
+              }
+              return newId;
+            }
+
+
+            function checkIfIdAlReadyExist (id){
+
+              var idAlReadyExist = false;
+
+              // boucle pour vérifier si l'ID donné existe déjà dans la db
+              for (var i = 0; i < todos.length; i++) {
+                if (todos[i].id === id) {
+                  idAlReadyExist = true;
+                  break;
+                }
+              }
+              if (idAlReadyExist === true) {
+                id = generateNewId();
+                console.log('id :' + id + 'existe');
+                checkIfIdAlReadyExist(id);
+              } else {
+                // assigne un id
+                updateData.id = parseInt(id);
+                console.log('id :' + id + 'ok');
+                todos.push(updateData);
+                localStorage[self._dbName] = JSON.stringify(data);
+                callback.call(self, todos);
+              }
+            }
+
+            var newId = generateNewId();
+            checkIfIdAlReadyExist(id);
+          }
+        };
+
+mais ça me retourne des erreures.
+
+
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
 
         Controller.prototype.removeItem = function (id) {
