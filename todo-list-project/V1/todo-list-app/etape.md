@@ -153,6 +153,7 @@ test avec :
 
 mais ça me retourne des erreures.
 
+#### TODO ETAPE 1 : améliorer la méthode de generateId
 
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
 
@@ -196,16 +197,16 @@ Notre fonction devient :
 
 
 ## ETAPE 2
-test via Jasmine => en cours
+test via Jasmine => OK
 1. #62 => test si on affiche bien model et setview : OK
 2. #92 => test si on affiche bien les todos de l'onglet active : OK
 3. #103 => test si on affiche bien les todos de l'onglet completed : OK
-4. #145 => test si "All" est surligné quand on a l' onglet défaut : en cours
-5. #149 => test si "Active" est surligné quand on change pour l'onglet active : en cours
-6. #153 => test si on bascule tous les états des todos vers terminé : en cours
-7. #158 => test la mise à jour des views : en cours
-8. #163 => test si on a bien le bon model en cas d' ajout d'un todo : en cours
-9. #204 => test si on supprime un todo du model : en cours
+4. #157 => test si "All" est surligné quand on a l' onglet défaut : OK
+5. #167 => test si "Active" est surligné quand on change pour l'onglet active : OK
+6. #178 => test si on bascule tous les états des todos vers terminé : OK
+7. #192 => test la mise à jour des views : OK
+8. #206=> test si on a bien le bon model en cas d' ajout d'un todo : OK
+9. #253 => test si on supprime un todo du model : OK
 
 ## ETAPE 3
 Audit site concurrent => OK
@@ -217,4 +218,6 @@ Audit site concurrent => OK
 documenter les éléments suivants :
 1. le projet lui-même (l'usage non technique) : doc utilisateur pdf + github => OK
 2. comment il fonctionne techniquement : doc technique via docdash => OK js/out/index.html
+
+#### TODO ETAPE 4 : vérifier docdash store.js
 
