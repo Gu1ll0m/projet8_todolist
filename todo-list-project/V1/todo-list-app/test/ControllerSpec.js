@@ -190,13 +190,17 @@ describe('controller', function () {
 
 		it('should update the view', function () {
 			// TODO: write test
-			var todo = {id: 42, title: 'my todo', completed: true};
+			var todo = [{id: 42, title: 'my todo', completed: false},
+						{id: 43, title: 'my todo', completed: false}
+						]
 			setUpModel([todo]);
 			subject.setView('');
 
 			view.trigger('itemToggle', {id: 42, completed: false});
+			view.trigger('itemToggle', {id: 43, completed: false});
 
 			expect(view.render).toHaveBeenCalledWith('elementComplete', {id: 42, completed: false});
+			expect(view.render).toHaveBeenCalledWith('elementComplete', {id: 43, completed: false});
 		});
 	});
 
