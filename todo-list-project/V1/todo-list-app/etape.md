@@ -205,8 +205,8 @@ test via Jasmine => OK
 5. #167 => test si "Active" est surligné quand on change pour l'onglet active : OK
 6. #178 => test si on bascule tous les états des todos vers terminé : OK
 7. #192 => test la mise à jour des views : OK
-8. #206=> test si on a bien le bon model en cas d' ajout d'un todo : OK
-9. #253 => test si on supprime un todo du model : OK
+8. #209=> test si on a bien le bon model en cas d' ajout d'un todo : OK
+9. #257 => test si on supprime un todo du model : OK
 
 ## ETAPE 3
 Audit site concurrent => OK
