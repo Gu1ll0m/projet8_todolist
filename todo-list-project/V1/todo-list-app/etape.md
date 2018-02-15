@@ -199,14 +199,18 @@ Notre fonction devient :
 ## ETAPE 2
 test via Jasmine => OK
 1. #62 => test si on affiche bien model et setview : OK
-2. #92 => test si on affiche bien les todos de l'onglet active : OK
-3. #103 => test si on affiche bien les todos de l'onglet completed : OK
-4. #157 => test si "All" est surligné quand on a l' onglet défaut : OK
-5. #167 => test si "Active" est surligné quand on change pour l'onglet active : OK
-6. #178 => test si on bascule tous les états des todos vers terminé : OK
-7. #192 => test la mise à jour des views : OK
-8. #209=> test si on a bien le bon model en cas d' ajout d'un todo : OK
-9. #257 => test si on supprime un todo du model : OK
+2. #92 => test la view quand on affiche bien les todos de l'onglet active : OK
+3. #114 => test la view quand on affiche bien les todos de l'onglet completed : OK
+4. #179 => test la view si "All" est surligné quand on a l' onglet défaut : OK
+5. #189 => test la view si "Active" est surligné quand on change pour l'onglet active : OK
+6. #200 => test le model quand on bascule tous les états des todos vers terminé : OK
+7. #215 => test la mise à jour de view : OK
+8. #232=> test le model en cas d' ajout d'un todo : OK
+9. #281 => test le model si on supprime un todo : OK
+
+rajout test =>
+1. #103 => test le model quand on affiche les todos de l'onglet active : OK
+2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
 
 ## ETAPE 3
 Audit site concurrent => OK
