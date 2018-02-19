@@ -74,41 +74,37 @@
 	 * @param {number} (id) Un paramètre facultatif pour entrer un ID d'un élément à mettre à jour
 	 */
 	Store.prototype.save = function (updateData, callback, id) {
-		var data = JSON.parse(localStorage[this._dbName]);
-		var todos = data.todos;
+        var data = JSON.parse(localStorage[this._dbName]);
+        var todos = data.todos;
 
-		callback = callback || function () {};
+        callback = callback || function () {};
 
 		// Génére un identifiant
-	    var newId = "";
-	    var charset = "0123456789";
-
-        for (var i = 0; i < 19 ; i++) {
-     		newId += charset.charAt(Math.floor(Math.random() * charset.length));
-		}
+		// renvoie le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 UTC
+		var newId = Date.now();
 
 		// Si un ID a été donné, trouve l'élément et met à jour les propriétés
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
-				if (todos[i].id === id) {
-					for (var key in updateData) {
-						todos[i][key] = updateData[key];
-					}
-					break;
-				}
+		  		if (todos[i].id === id) {
+		    		for (var key in updateData) {
+	      			todos[i][key] = updateData[key];
+		    		}
+		    		break;
+		  		}
 			}
-
+			console.log('id : ' + id);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
 		} else {
-
-    		// Attribue un ID
+		  	// Attribue un ID
 			updateData.id = parseInt(newId);
+			console.log('id : ' + newId + ' ok');
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, [updateData]);
 		}
-	};
+    };
 
 
 	/**
@@ -136,6 +132,7 @@
 		localStorage[this._dbName] = JSON.stringify(data);
 		callback.call(this, todos);
 	};
+
 
 	/**
 	 * Commence un nouveau stockage
