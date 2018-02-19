@@ -1,7 +1,7 @@
-#Reprenez et améliorez un projet existant (110 heures)
+# Reprenez et améliorez un projet existant (110 heures)
 
 
-##Énoncé
+## Énoncé
 
 Dans le monde professionnel, on est souvent amené à reprendre un projet existant. Que faire quand vous vous retrouvez avec le code de quelqu'un d'autre ? Comment l'améliorer ? Voilà un savoir-faire qui vous sera très utile au quotidien !
 
@@ -16,7 +16,7 @@ Regardez comment il est structuré et essayez de comprendre comment il fonctionn
 
 
 
-###Etape 1 : Corrigez les bugs
+### Etape 1 : Corrigez les bugs
 
 Il y a deux bugs dans le code et c'est votre mission de les trouver ! Voici quelques indices:
 
@@ -28,7 +28,7 @@ Vous allez chercher ces bugs dans le code, un peu comme dans "Où est Charlie". 
 3. Il y a également des améliorations à faire, même s'il ne s'agit pas de bugs proprement dit. Essayez de trouver où vous pouvez optimiser des boucles et vérifiez s'il y a des fonctions qui affichent des informations dans la console de déboggage  qui ne sont pas nécessaires.
 
 
-###Etape 2 : où sont les tests ?!
+### Etape 2 : où sont les tests ?!
 
 1. Vous allez voir que ce projet a déjà quelques tests mais largement pas assez ! Pour le prendre en main, vous allez ajouter tous les tests unitaires et fonctionnels  pertinents que vous pouvez. L'objectif est de solidifier le projet. Ainsi, lorsque vous le modifierez par la suite, vous pourrez vous baser sur ces tests pour vérifier que vous ne "cassez" rien.
 Cette étape peut paraître un peu longue et fastidieuse, mais elle est nécessaire pour gagner beaucoup de temps et éviter des surprises à l'avenir !
@@ -43,7 +43,7 @@ Vous pouvez aller plus loin et ajouter des tests supplémentaires si vous le vou
 Astuce : gagnez du temps en adoptant la méthode TDD. Comme beaucoup de développeur·ses, si vous rédigez vos tests et corrigez des bugs en même temps, vous pouvez utiliser des tests pour identifier ce qui ne fonctionne pas - ce qui accélère la correction des bugs.
 
 
-###Etape 3 : optimisez la performance
+### Etape 3 : optimisez la performance
 
 Votre équipe vous a demandé d'analyser la performance d'un site concurrent pour identifier ce qui marche bien et ce qui ne marche pas, au cas où vous décidez de "scaler" votre propre application. Voici le site du concurrent : http://todolistme.net/
 
@@ -51,7 +51,7 @@ Votre équipe vous a demandé d'analyser la performance d'un site concurrent pou
 
 2. Maintenant, vous allez faire un audit de performance. En vous appuyant sur les données, écrivez un document de 300 à 500 mots qui décrit la performance du site, comment il se distingue de votre application, et comment optimiser la performance en vue d'un éventuel "scaling" de votre application.
 
-###Etape 4 : améliorez le projet
+### Etape 4 : améliorez le projet
 
 Maintenant que vous connaissez ce code par cœur, vous pouvez facilement ajouter des informations supplémentaires à votre documentation. Vous êtes désormais prêt à écrire de la documentation technique ! Jetez un œil aux exemples suivants pour vous inspirer (voir P8/5-real-life-examples-beautiful-technical-documentation.html).
 
@@ -68,7 +68,7 @@ Vous pouvez utiliser le format que vous souhaitez (ex. un wiki sur Github, un do
 1. La base de code mise à jour avec les améliorations et les tests
 2. La documentation technique de votre projet, y compris votre audit, sous le format que vous souhaitez.
 
-##Presentation
+## Presentation
 
 Vous ferez une presentation de votre projet avec un mentor, afin de simuler des conditions réelles.
 La présentation suivra la structure ci-dessous :
