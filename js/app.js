@@ -16,13 +16,15 @@
 		this.controller = new app.Controller(this.model, this.view);
 	}
 
+	/**
+	 * Définit un nouveau todo
+	 */
 	var todo = new Todo('todos-vanillajs'); // dans View.js, View.prototype.bind() et View.prototype.render()
 
 
 	/**
-	 * Ajoute la route dans l' url ''|| active || completed
+	 * Ajoute la route de la page dans l' url ''|| active || completed
 	 */
-
 	function setView() {
 		todo.controller.setView(document.location.hash);
 	}
