@@ -6,9 +6,8 @@
 	/**
 	 * Crée un nouvel objet de stockage côté client et crée un espace vide aucun stockage existe.
 	 * @constructor
-	 * @param {string} (name) Le nom de notre DB que nous voulons utiliser
-	 * @param {function} (callback) Notre fausse DB utilise des rappels car dans
-	 * la vie réelle, vous feriez probablement des appels AJAX
+	 * @param {string} (name) Le nom de notre DB que nous voulons utiliser.
+	 * @param {function} (callback) La foncion de rappel.
 	 */
 	function Store(name, callback) {
 		callback = callback || function () {};
@@ -30,8 +29,8 @@
 	/**
 	 * Trouve les éléments basés sur une requête donnée en tant qu'objet JS
 	 * @param {object} (query) La requête à comparer (c'est-à-dire {foo: 'bar'})
-	 * @param {function} (callback) La fonction de rappel à déclencher lorsque l' exécution de
-	 * la requête est terminée
+	 * @param {function} (callback) La fonction de rappel à déclencher lorsque l' exécution
+	 * de la requête est terminée.
 	 *
 	 * @example
 	 * db.find({foo: 'bar', hello: 'world'}, function (data) {
@@ -58,8 +57,8 @@
 
 
 	/**
-	 * Récupére toutes les données
-	 * @param {function} (callback) La fonction de rappel lors de la récupération des données
+	 * Récupére toutes les données.
+	 * @param {function} (callback) La fonction de rappel lors de la récupération des données.
 	 */
 	Store.prototype.findAll = function (callback) {
 		callback = callback || function () {};
@@ -80,11 +79,16 @@
 
         callback = callback || function () {};
 
-		// Génére un identifiant unique
-		// renvoie le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 UTC
+		/**
+		 * Génére un identifiant unique : Renvoie le nombre de millisecondes écoulées
+		 * depuis le 1er Janvier 1970 00:00:00 UTC.
+		 */
 		var newId = Date.now();
 
-		// Si un ID a été donné, trouve l'élément et met à jour les propriétés
+		/**
+		 * Si un ID a été donné, trouve l'élément et met à jour les propriétés
+		 * @param  {number} (id) L' ID de l' élément.
+		 */
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
 		  		if (todos[i].id === id) {
@@ -109,9 +113,9 @@
 
 
 	/**
-	 * Retire un élément en fonction de son identifiant
-	 * @param {number} (id) L'identifiant de l'objet que vous souhaitez supprimer
-	 * @param {function} (callback) The callback après l'enregistrement
+	 * Retire un élément en fonction de son identifiant.
+	 * @param {number} (id) L'identifiant de l'objet que vous souhaitez supprimer.
+	 * @param {function} (callback) Le callback après l'enregistrement.
 	 */
 	Store.prototype.remove = function (id, callback) {
 		var data = JSON.parse(localStorage[this._dbName]);
