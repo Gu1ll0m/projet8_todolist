@@ -5,7 +5,7 @@
 	/**
 	 * Crée une nouvelle instance de model et raccorde store.
 	 * @constructor
-	 * @param {object} (storage) Une référence à la classe de stockage côté client {@link Store}
+	 * @param {object} (storage) Une référence à la classe de stockage côté client {@link Store}.
 	 */
 	function Model(storage) {
 		this.storage = storage;
@@ -13,9 +13,9 @@
 
 
 	/**
-	 * Crée un nouveau model de todo
-	 * @param {string} (title) Le titre de la tâche
-	 * @param {function} (callback) La fonction de rappel après la création du modèle
+	 * Crée un nouveau model de todo.
+	 * @param {string} (title) Le contenu du todo.
+	 * @param {function} (callback) La fonction de rappel après la création du modèle.
 	 */
 	Model.prototype.create = function (title, callback) {
 		title = title || '';
@@ -62,9 +62,9 @@
 	/**
 	 * Met à jour un modèle en lui attribuant un ID, des données et un callback lorsque la mise à jour
 	 * est terminée.
-	 * @param {number} (id) L' ID du model à mettre à jour
-	 * @param {object} (data) Les données à mettre à jour et leurs nouvelles valeurs
-	 * @param {function} (callback) La fonction de rappel quand la mise à jour est terminée
+	 * @param {number} (id) L' ID du model à mettre à jour.
+	 * @param {object} (data) Les données à mettre à jour et leurs nouvelles valeurs.
+	 * @param {function} (callback) La fonction de rappel quand la mise à jour est terminée.
 	 */
 	Model.prototype.update = function (id, data, callback) {
 		this.storage.save(data, callback, id);
@@ -72,8 +72,8 @@
 
 
 	/**
-	 * Supprime un modèle du stockage
-	 * @param {number} (id) L' ID du model à supprimer
+	 * Supprime un modèle du stockage.
+	 * @param {number} (id) L' ID du model à supprimer.
 	 * @param {function} (callback) La fonction de rappel lorsque la suppression est terminée.
 	 */
 	Model.prototype.remove = function (id, callback) {
