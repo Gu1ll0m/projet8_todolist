@@ -12,6 +12,7 @@
 		'`': '&#x60;'
 	};
 
+
 	var escapeHtmlChar = function (chr) {
 		return htmlEscapes[chr];
 	};
@@ -81,9 +82,9 @@
 
 
 	/**
-	 * Affiche un compteur du nombre de tâches à terminer
-	 * @param {number} (activeTodos) Le nombre de todos actifs
-	 * @returns {string} Chaîne contenant le nombre
+	 * Affiche un compteur du nombre de tâches à terminer.
+	 * @param {number} (activeTodos) Le nombre de todos actifs.
+	 * @returns {string} Chaîne contenant le nombre.
 	 */
 	Template.prototype.itemCounter = function (activeTodos) {
 		var plural = activeTodos === 1 ? '' : 's';
@@ -93,9 +94,9 @@
 
 
 	/**
-	 * Met à jour le texte dans le bouton "Clear completed"
-	 * @param  {number} (completedTodos) Le nombre de todos complété
-	 * @returns {string} Chaîne contenant le nombre
+	 * Met à jour le texte dans le bouton "Clear completed".
+	 * @param  {number} (completedTodos) Le nombre de todos complété.
+	 * @returns {string} Chaîne contenant le nombre.
 	 */
 	Template.prototype.clearCompletedButton = function (completedTodos) {
 		if (completedTodos > 0) {
