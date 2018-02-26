@@ -7,31 +7,101 @@
 
 Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__ (#100)
 
+	/**
+	 * Evénement à déclencher lorsque vous souhaitez ajouter un élément. Il suffit de passer
+	 * dans l'objet événement et il va gérer l'insertion DOM et la sauvegarde du nouvel élément.
+	 * @param {string} (title) Le contenu du todo.
+	 */
+	Controller.prototype.addItem = function (title) {
+		var self = this;
+
+		if (title.trim() === '') {
+			return;
+		}
+
+		self.model.create(title, function () {
+			self.view.render('clearNewTodo');
+			self._filter(true);
+		});
+	};
+
 #### 2. bug 2 : création des ID dans [__store.js__](./js/store.js)
 
 Store.prototype.save (#76)
 
 > La méthode [Date.now()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now) est parfaitement adapté. La fonction retourne un chiffre unique correspondant au nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00. Il s' agit donc de notre __identifiant unique__.
 
-    var newId = Date.now();
-    
-> Il convient de modifier également la boucle if suivante :
+    /**
+	 * Sauvegarde les données données dans la base de données. Si aucun élément n'existe, un nouveau élément
+	 *  sera créé, sinon une mise à jour des propriétés de l' élément existant sera réalisé
+	 * @param {object} (updateData) Les données à sauvegarder dans la base de données
+	 * @param {function} (callback) La fonction de rappel après l'enregistrement
+	 * @param {number} (id) Un paramètre facultatif pour entrer un ID d'un élément à mettre à jour
+	 */
+	Store.prototype.save = function (updateData, callback, id) {
+        var data = JSON.parse(localStorage[this._dbName]);
+        var todos = data.todos;
 
-    if (id) {
-          for (var i = 0; i < todos.length; i++) {
-              if (todos[i].id === id) {
-                for (var key in updateData) {
-                  todos[i][key] = updateData[key];
-                }
-                break;
-              }
-          }
+        callback = callback || function () {};
+
+		/**
+		 * Génére un identifiant unique : Renvoie le nombre de millisecondes écoulées
+		 * depuis le 1er Janvier 1970 00:00:00 UTC.
+		 * @example
+		 * return {number} 1519326977765
+		 */
+		var newId = Date.now();
+
+		/**
+		 * Si un ID a été donné, trouve l'élément et met à jour les propriétés
+		 * @param  {number} (id) L' ID de l' élément.
+		 */
+		if (id) {
+			for (var i = 0; i < todos.length; i++) {
+		  		if (todos[i].id === id) {
+		    		for (var key in updateData) {
+	      			todos[i][key] = updateData[key];
+		    		}
+		    		break;
+		  		}
+			}
+			console.log('id : ' + id);
+			localStorage[this._dbName] = JSON.stringify(data);
+			callback.call(this, todos);
+		} else {
+		  	// Attribue un ID
+			updateData.id = parseInt(newId);
+			console.log('id : ' + newId + ' ok');
+			todos.push(updateData);
+			localStorage[this._dbName] = JSON.stringify(data);
+			callback.call(this, [updateData]);
+		}
+    };
 
 #### 3. amélioration : [__controller.js__](./js/controller.js)
 
-Controller.prototype.removeItem (#169)=> la boucle forEach est inadapté.
+Controller.prototype.removeItem => la boucle forEach est inadapté.
 
 > Le console.log donne une mauvaise information, il convient de mettre le console.log après le render plutôt qu' avant et de surrpimer la boucle forEach inutile.
+
+    /**
+	 * Supprime un élément de la liste.
+	 * @param {number} (id) L'ID de l'élément à retirer du DOM et du stockage.
+	 */
+	Controller.prototype.removeItem = function (id) {
+		var self = this;
+		var items;
+		self.model.read(function(data) {
+			items = data;
+		});
+
+		self.model.remove(id, function () {
+			self.view.render('removeItem', id);
+			console.log("Element with ID: " + id + " has been removed.");
+		});
+
+		self._filter();
+	};
 
 
 
