@@ -88,7 +88,7 @@ describe('controller', function () {
 			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 
-		it('should show active entries', function () {
+		it('should show active entries to the view', function () {
 			// TODO: write test
 			// completed = false
 			var todo = {title: 'my todo', completed: false};
@@ -99,7 +99,7 @@ describe('controller', function () {
 			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 
-		it('should show active entries to the model (NEW TEST)', function () {
+		it('should show active entries to the model', function () {
 			// TODO : new test
 			// test le model
 			var todo = {title: 'my todo', completed: false};
@@ -110,7 +110,7 @@ describe('controller', function () {
 			expect(model.read).toHaveBeenCalledWith({completed: false}, jasmine.any(Function));
 		});
 
-		it('should show completed entries', function () {
+		it('should show completed entries to the view', function () {
 			// TODO: write test
 			// completed = true
 			var todo = {title: 'my todo', completed: true};
@@ -121,7 +121,7 @@ describe('controller', function () {
 			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 
-		it('should show completed entries to the model (NEW TEST)', function () {
+		it('should show completed entries to the model', function () {
 			// TODO : new test
 			// test le model
 			var todo = {title: 'my todo', completed: true};
@@ -196,10 +196,10 @@ describe('controller', function () {
 	describe('toggle all', function () {
 		it('should toggle all todos to completed', function () {
 			// TODO: write test
-			var todo = [{id: 42, title: 'my todo', completed: false},
+			var todos = [{id: 42, title: 'my todo', completed: false},
 						{id: 43, title: 'another todo', completed: false}
 						]
-			setUpModel(todo);
+			setUpModel(todos);
 
 			subject.setView('');
 
@@ -211,15 +211,12 @@ describe('controller', function () {
 
 		it('should update the view', function () {
 			// TODO: write test
-			var todo = [{id: 42, title: 'my todo', completed: false},
+			var todos = [{id: 42, title: 'my todo', completed: false},
 						{id: 43, title: 'another todo', completed: false}
 						]
-			setUpModel([todo]);
+			setUpModel([todos]);
 
 			subject.setView('');
-
-			view.trigger('toggleAll', {id: 42, completed: true});
-			view.trigger('toggleAll', {id: 43, completed: true});
 
 			view.trigger('toggleAll', {completed: false});
 
