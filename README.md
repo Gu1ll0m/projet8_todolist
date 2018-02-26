@@ -109,7 +109,7 @@ Controller.prototype.removeItem => la boucle forEach est inadapté.
 
 Tests unitaires avec le framework[ __Jasmine__](https://github.com/jasmine/)
 Pré-requis : 
-* installer NPM [NPM et NodeJs](https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm)
+* installer [NPM et NodeJs](https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm)
 * installer [ __Jasmine__](https://github.com/jasmine/jasmine/releases)
 
 Télécharger [le dossier](https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __SpecRunner.html__ que vous trouverez en suivant le chemin suivant `../P8/test/SpecRunner.html`
