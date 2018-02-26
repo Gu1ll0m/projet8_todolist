@@ -5,17 +5,20 @@
 ### Etape 1 : Corrigez les bugs
 
 1. bug 1 : faute de frappe dans controller.js => Controller.prototype.addItem à la place de Controller.prototype.adddItem
+
 2. bug 2 : création des ID dans store.js => Store.prototype.save
 
 La méthode Date.now() fonctionne, ça retourne le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 donc identifiant unique. Si énormément d' utilisateurs il faut un système de gestion de compte.
 
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
+
 Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
 
 
 ### Etape 2 : où sont les tests ?!
 
 test via Jasmine => OK
+
 Ouvrir le fichier SpecRunner.html dans le dossier test.
 Les tests sont dans le fichier ControllerSpec.js.
 
