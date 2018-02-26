@@ -1,8 +1,11 @@
 # Documentation utilisateur de notre application Todos
 
 Notre application a pour objectif de vous permettre très facilement de créer des todos-list.
+
 Pour ce faire nous avons élaborer des fonctions permettant de créer, de modifier ou supprimer des éléments.
-Notre application doit être utilisable par tous, de 7 à 77 ans, sur tout type de support (ordinateur, tablette, smartphone,…)
+
+Notre application doit être utilisable par tous, de 7 à 77 ans, sur tout type de support (ordinateur, tablette, smartphone,…).
+
 Nous vous proposons donc de voir comment réaliser les actions suivantes :
 1. créer un todo
 2. modifier un todo
@@ -18,12 +21,15 @@ Notre application se présente de la façon suivante.
 ![img](doc_utilisateur_creer_todo.png)
 
 Pour créer un Todo cliquer dans « what needs to be done ? » et écriver votre todo.
-Appuyer sur « entrée » pour enregistrer le todo.
+
+Appuyer sur _entrée_ pour enregistrer le todo.
+
 Vous avez créé votre premier todo.
 
 ![img](doc_utilisateur_1er_todo.png)
 
 Votre todo apparaît dans la liste des todos.
+
 Plusieurs éléments sont apparus :
 + un icône à gauche de « what needs to be done ? »
 + une indication du nombre de todos, ici « 1 item left »
@@ -55,36 +61,40 @@ Nous avons créé 3 todos, notre second todo est terminé.
 
 Pour signifier que votre todo est terminé il suffit de cliquer dans le cercle à gauche du todo.
 
-Une fois fait le todo est barré et un bouton « Clear completed » apparaît en bas à droite. Ce bouton sert à effacé le todo que l’on a indiqué comme terminé.
+Une fois fait le todo est barré et un bouton « Clear completed » apparaît en bas à droite. 
+
+Ce bouton sert à effacé le todo que l’on a indiqué comme terminé.
 
 
 ## 4. Voir l’état de nos todos
 
 1. ![img](doc_utilisateur_all_todo.png)
 
-Le bouton « All » nous montre l’ ensemble des Todos quelques soit leur état.
+Le bouton _All_ nous montre l’ ensemble des Todos quelques soit leur état.
 
 2. ![img](doc_utilisateur_active_todo.png)
 
-Le bouton « Active » nous montre les Todos en cours.
+Le bouton _Active_ nous montre les Todos en cours.
 
 3. ![img](doc_utilisateur_completed_todo.png)
 
-Le bouton « Completed » quand à lui nous montre les todos que nous avons terminé.
+Le bouton _Completed_ quand à lui nous montre les todos que nous avons terminé.
 
 
 ## 5. Supprimer un ou plusieurs todos
 
 ![img](doc_utilisateur_clearcompleted_todo.png)
 
-Pour supprimer définitivement nos todos terminés, ceux que l’on retrouve dans l’onglet « Completed » il suffit de cliquer sur le bouton « clear completed » .
+Pour supprimer définitivement nos todos terminés, ceux que l’on retrouve dans l’onglet _Completed_, il suffit de cliquer sur le bouton _clear completed_ .
 
 Cette action effacera définitivement les todos en question.
 
 
 ![img](doc_utilisateur_croix_todo.png)
 
-Nous pouvons supprimer directement les todos un par un à la volée sans passé par l’onglet « Completed ». Pour se faire lorsque l’on survol un todo avec notre sourie une croix à droite apparaît.
+Nous pouvons supprimer directement les todos un par un à la volée sans passé par l’onglet _Completed_. 
+
+Pour se faire lorsque l’on survol un todo avec notre sourie une croix à droite apparaît.
 
 Cliquer sur la croix supprime définitivement le todo en question. Pas de retour en arrière possible.
 
