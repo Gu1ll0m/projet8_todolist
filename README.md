@@ -75,7 +75,7 @@ Store.prototype.save
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, [updateData]);
 		}
-    	};
+    };
 
 #### 3. amélioration : [__controller.js__](./js/controller.js)
 
