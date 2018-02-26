@@ -128,9 +128,15 @@ Fonctionnalité que l’on pourrait éventuellement intégré à notre applicati
 3. Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait
 4. La temporalité et les catégories de listes pourraient être intégrés ?
 
-    | Application de notre concurrent | Notre application |
-    | :---------------------------------: |: -----------------------------------------------------: |
-    | 1 Lente, pas optimisé |1 Rapide, optimisé et performante|
-    | 2 pas orienté PWA |2 PWA améliorable, axe d’ amélioration évident|
-    | 3 Accessibilité correcte |3 Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait|
-    | 4 Design discutable, quelques fonctionnalités intéressantes |La temporalité et les catégories de listes pourraient    être intégrés ?|
+        | Application de notre concurrent | Notre application |
+        | :---------------------------------: |: -----------------------------------------------------: |
+        | 1 Lente, pas optimisé |1 Rapide, optimisé et performante|
+        | 2 pas orienté PWA |2 PWA améliorable, axe d’ amélioration évident|
+        | 3 Accessibilité correcte |3 Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait|
+        | 4 Design discutable, quelques fonctionnalités intéressantes |La temporalité et les catégories de listes pourraient    être intégrés ?|
+    
+        | Les tableaux  | C'est            | Cool  |
+        | ------------- |:----------------:| -----:|
+        | 3e colonne est| alignée à droite | 1600€ |
+        | 2e colonne est| centrée          |   12€ |
+        | zebra stripes | are neat         |    1€ |
