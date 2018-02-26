@@ -33,18 +33,8 @@ Store.prototype.save (#76)
 
         callback = callback || function () {};
 
-		/**
-		 * Génére un identifiant unique : Renvoie le nombre de millisecondes écoulées
-		 * depuis le 1er Janvier 1970 00:00:00 UTC.
-		 * @example
-		 * return {number} 1519326977765
-		 */
 		var newId = Date.now();
 
-		/**
-		 * Si un ID a été donné, trouve l'élément et met à jour les propriétés
-		 * @param  {number} (id) L' ID de l' élément.
-		 */
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
 		  		if (todos[i].id === id) {
@@ -58,9 +48,7 @@ Store.prototype.save (#76)
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
 		} else {
-		  	// Attribue un ID
 			updateData.id = parseInt(newId);
-			console.log('id : ' + newId + ' ok');
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, [updateData]);
