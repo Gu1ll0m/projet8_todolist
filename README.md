@@ -1,6 +1,8 @@
 # Projet 8 : [Reprenez et améliorez un projet existant](https://openclassrooms.com/projects/reprenez-et-ameliorez-un-projet-existant)
 
 
+Recap des  [__fonctions__](./livrable/function_recap.pdf) de notre appli
+
 ## _Etape 1 : Corrigez les bugs_
 
 #### 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js)
