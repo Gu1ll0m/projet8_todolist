@@ -10,7 +10,7 @@
 
 > La méthode Date.now() fonctionne, ça retourne le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 donc identifiant unique.
 
-    'var newId = Date.now();'
+    var newId = Date.now();
     
 > Il convient de modifier également la boucle if suivante :
 
