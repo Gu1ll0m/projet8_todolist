@@ -53,10 +53,11 @@ __Tests suivants ajouté =>__
 > 2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
 
 
-### Etape 3 : optimisez la performance du site [http://todolistme.net/](http://todolistme.net/)
+### Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)
 Ouvrir dans votre navigateur le fichier [__audit.md__](./livrable/audit.md)
 
 
 ### Etape 4 : améliorez le projet
+
 
 
