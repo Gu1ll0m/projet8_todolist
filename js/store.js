@@ -80,8 +80,10 @@
         callback = callback || function () {};
 
 		/**
-		 * Génére un identifiant unique : Renvoie le nombre de millisecondes écoulées
-		 * depuis le 1er Janvier 1970 00:00:00 UTC.
+		 * Génére un identifiant unique
+		 * @see  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now
+		 * @example
+		 * return {number} 1519326977765
 		 */
 		var newId = Date.now();
 
