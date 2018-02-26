@@ -1,79 +1,43 @@
-# Reprenez et améliorez un projet existant (110 heures)
-
-
-## Énoncé
-
-Dans le monde professionnel, on est souvent amené à reprendre un projet existant. Que faire quand vous vous retrouvez avec le code de quelqu'un d'autre ? Comment l'améliorer ? Voilà un savoir-faire qui vous sera très utile au quotidien !
-
-En effet, faire un projet de bout en bout est "facile" : on connaît son fonctionnement sur le bout des doigts. En revanche, on se rend vite compte qu'il est plus dur de reprendre le travail de quelqu'un d'autre... surtout quand il n'a pas de tests !
-
-Vous venez d'intégrer une petite équipe qui pense que tous les problèmes du monde viennent du fait que les gens ne sont pas assez organisés et qu'un peu de focus pourrait tout changer ! C'est pourquoi ils ont créé ce qu'ils appellent la meilleur application "to-do list" du monde. L'idée elle-même est très bien mais le code derrière n'est pas au top ! Ils vous ont sollicité pour ajouter des tests et régler quelques bugs dans le code.
-
-Commencez par télécharger le code du projet :
-https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/project-8-frontend/todo-list-project.zip
-
-Regardez comment il est structuré et essayez de comprendre comment il fonctionne. Votre mission sera de corriger des bugs, ajouter des tests, et optimiser sa performance.
+# Projet 8 : [Reprenez et améliorez un projet existant](https://openclassrooms.com/projects/reprenez-et-ameliorez-un-projet-existant)
 
 
 
 ### Etape 1 : Corrigez les bugs
 
-Il y a deux bugs dans le code et c'est votre mission de les trouver ! Voici quelques indices:
+1. bug 1 : faute de frappe dans controller.js => Controller.prototype.addItem à la place de Controller.prototype.adddItem
+2. bug 2 : création des ID dans store.js => Store.prototype.save
 
-1. Le premier est une faute de frappe.
+La méthode Date.now() fonctionne, ça retourne le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 donc identifiant unique. Si énormément d' utilisateurs il faut un système de gestion de compte.
 
-2. Le deuxième introduit un conflit éventuel entre deux IDs identiques.
-Vous allez chercher ces bugs dans le code, un peu comme dans "Où est Charlie". Une fois les bugs trouvés, corrigez-les ! Ils empêchent le code de marcher correctement (pour l'instant ce n'est même pas possible d'ajouter des tâches à la liste à cause de ces bugs).
-
-3. Il y a également des améliorations à faire, même s'il ne s'agit pas de bugs proprement dit. Essayez de trouver où vous pouvez optimiser des boucles et vérifiez s'il y a des fonctions qui affichent des informations dans la console de déboggage  qui ne sont pas nécessaires.
+3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
+Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
 
 
 ### Etape 2 : où sont les tests ?!
 
-1. Vous allez voir que ce projet a déjà quelques tests mais largement pas assez ! Pour le prendre en main, vous allez ajouter tous les tests unitaires et fonctionnels  pertinents que vous pouvez. L'objectif est de solidifier le projet. Ainsi, lorsque vous le modifierez par la suite, vous pourrez vous baser sur ces tests pour vérifier que vous ne "cassez" rien.
-Cette étape peut paraître un peu longue et fastidieuse, mais elle est nécessaire pour gagner beaucoup de temps et éviter des surprises à l'avenir !
+test via Jasmine => OK
+Ouvrir le fichier SpecRunner.html dans le dossier test.
+Les tests sont dans le fichier ControllerSpec.js.
 
-Il est nécessaire d'utiliser la commande  npm install  pour installer tous les fichiers Jasmine.
+1. #62 => test si on affiche bien model et setview : OK
+2. #92 => test la view quand on affiche bien les todos de l'onglet active : OK
+3. #114 => test la view quand on affiche bien les todos de l'onglet completed : OK
+4. #179 => test la view si "All" est surligné quand on a l' onglet défaut : OK
+5. #189 => test la view si "Active" est surligné quand on change pour l'onglet active : OK
+6. #200 => test le model quand on bascule tous les états des todos vers terminé : OK
+7. #215 => test la mise à jour de view : OK
+8. #232=> test le model en cas d' ajout d'un todo : OK
+9. #281 => test le model si on supprime un todo : OK
 
-2. Il y a déjà un fichier existant pour les tests de ce projet :  ControllerSpec.js .  À l'intérieur de ce fichier, quelques tests à ajouter sont indiqués dans le code. Ils sont indiqués avec le commentaire suivant :
-// TODO: write test
-Plus précisément, vous pouvez les trouver sur les lignes #62, #86, #90, #137, #141, #146, #150, #156, et #196 de  ControllerSpec.js .
-Vous pouvez aller plus loin et ajouter des tests supplémentaires si vous le voulez !
-
-Astuce : gagnez du temps en adoptant la méthode TDD. Comme beaucoup de développeur·ses, si vous rédigez vos tests et corrigez des bugs en même temps, vous pouvez utiliser des tests pour identifier ce qui ne fonctionne pas - ce qui accélère la correction des bugs.
+rajout test =>
+1. #103 => test le model quand on affiche les todos de l'onglet active : OK
+2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
 
 
 ### Etape 3 : optimisez la performance
 
-Votre équipe vous a demandé d'analyser la performance d'un site concurrent pour identifier ce qui marche bien et ce qui ne marche pas, au cas où vous décidez de "scaler" votre propre application. Voici le site du concurrent : http://todolistme.net/
 
-1. Utilisez la console de développement de votre navigateur pour analyser la performance du site. Faites attention aux ressources utilisées par les différents éléments du site (par exemple, ce qui est lent, ce qui est rapide, etc) et aux ressources utilisées par les publicités sur le site et celles utilisées pour effectuer les fonctionnalités "To-do" pour la liste elle-même.
-
-2. Maintenant, vous allez faire un audit de performance. En vous appuyant sur les données, écrivez un document de 300 à 500 mots qui décrit la performance du site, comment il se distingue de votre application, et comment optimiser la performance en vue d'un éventuel "scaling" de votre application.
 
 ### Etape 4 : améliorez le projet
 
-Maintenant que vous connaissez ce code par cœur, vous pouvez facilement ajouter des informations supplémentaires à votre documentation. Vous êtes désormais prêt à écrire de la documentation technique ! Jetez un œil aux exemples suivants pour vous inspirer (voir P8/5-real-life-examples-beautiful-technical-documentation.html).
 
-Pour le dire plus simplement, il faut documenter les éléments suivants :
-1. le projet lui-même (l'usage non technique)
-2. comment il fonctionne techniquement
-3. votre audit
-
-Vous pouvez utiliser le format que vous souhaitez (ex. un wiki sur Github, un document en format texte, etc).
-
-
-## Fichiers à fournir
-
-1. La base de code mise à jour avec les améliorations et les tests
-2. La documentation technique de votre projet, y compris votre audit, sous le format que vous souhaitez.
-
-## Presentation
-
-Vous ferez une presentation de votre projet avec un mentor, afin de simuler des conditions réelles.
-La présentation suivra la structure ci-dessous :
-
-1. Présentation de votre code, des tests et de vos optimisations : 15-20 minutes
-2. Questions / réponses : 10 minutes
-
-À la fin de votre présentation, le mentor fera un débriefing pendant environ 5 minutes.
