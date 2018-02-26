@@ -83,7 +83,7 @@
 		 * Génére un identifiant unique
 		 * @see  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now
 		 * @example
-		 * return {number} 1519326977765
+		 * returns {number} 1519326977765
 		 */
 		var newId = Date.now();
 
