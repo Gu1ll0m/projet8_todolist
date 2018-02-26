@@ -5,11 +5,11 @@
 
 #### 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js)
 
-Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__
+Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__ (#100)
 
 #### 2. bug 2 : création des ID dans [__store.js__](./js/store.js)
 
-Store.prototype.save
+Store.prototype.save (#76)
 
 > La méthode [Date.now()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now) est parfaitement adapté. La fonction retourne un chiffre unique correspondant au nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00. Il s' agit donc de notre __identifiant unique__.
 
@@ -29,7 +29,7 @@ Store.prototype.save
 
 #### 3. amélioration : [__controller.js__](./js/controller.js)
 
-Controller.prototype.removeItem => la boucle forEach est inadapté.
+Controller.prototype.removeItem (#169)=> la boucle forEach est inadapté.
 
 > Le console.log donne une mauvaise information, il convient de mettre le console.log après le render plutôt qu' avant et de surrpimer la boucle forEach inutile.
 
