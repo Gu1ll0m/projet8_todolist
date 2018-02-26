@@ -39,6 +39,7 @@ Voyons maintenant comment modifier un todo.
 ![img](doc_utilisateur_edit_todo.png)
 
 Afin d’ avoir l’ application la plus simple à utiliser nous avons choisit de permettre l’ édition tout simplement en double cliquant dans le todo à modifier directement.
+
 Taper sur _Entrée_ pour valider la modification ou sur _échap_ pour l' annuler.
 
 Le todo que vous modifié est encadré.
