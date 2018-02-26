@@ -151,6 +151,6 @@ Ouvrir l' _audit de performance_ dans votre navigateur : [__audit.md__](./livrab
 
 Ouvrir la _documentation utilisateur_ dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
 
-Ouvrir la _documentation technique_ dans votre navigateur : [_doc_technique_](https://gu1ll0m.github.io/projet8_todolist/)
+Ouvrir la _documentation technique_ dans votre navigateur : [__doc_technique__](https://gu1ll0m.github.io/projet8_todolist/)
 
 
