@@ -1,6 +1,15 @@
 # Projet 8 : [Reprenez et améliorez un projet existant](https://openclassrooms.com/projects/reprenez-et-ameliorez-un-projet-existant)
 
-Amélioration d'un projet existant de todo-list en vanillaJS
+Amélioration d'un projet existant de todo-list en vanillaJS.
+
+Le projet comporte quelques bugs a __identifier et corriger__, quelques __optimisations__ possibles à intégrer.
+
+Les tests unitaires sont à améliorer en utilisant le framework __Jasmine__.
+
+Un audit de performance est attendu sur un site relativement à notre application, la mise en évidence de certaines fonctionnalités intéressantes est attendu.
+
+Enfin une documentation utilisateur ainsi qu'une documentation technique sous attendus.
+
 
 Recap des  [__fichiers et fonctions__](./livrable/function_recap.pdf) de notre appli
 
