@@ -1,7 +1,7 @@
 # Projet 8 : [Reprenez et améliorez un projet existant](https://openclassrooms.com/projects/reprenez-et-ameliorez-un-projet-existant)
 
 
-### Etape 1 : Corrigez les bugs
+### _Etape 1 : Corrigez les bugs_
 
 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js) => Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__
 
@@ -28,7 +28,7 @@
 > Le console.log donne une mauvaise information, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
 
 
-### Etape 2 : où sont les tests ?!
+### _Etape 2 : où sont les tests ?!_
 
 tests unitaires avec le framework[ __Jasmine__](https://github.com/jasmine/)
 
@@ -53,11 +53,12 @@ __Tests suivants ajouté =>__
 > 2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
 
 
-### Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)
+### _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
+
 Ouvrir dans votre navigateur le fichier [__audit.md__](./livrable/audit.md)
 
 
-### Etape 4 : améliorez le projet
+### _Etape 4 : améliorez le projet_
 
 
 
