@@ -63,11 +63,12 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 ## _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
 
-Ouvrir dans votre navigateur le fichier [__audit.md__](./livrable/audit.md)
+Ouvrir l' audit dans votre navigateur : [__audit.md__](./livrable/audit.md)
 
 
 ## _Etape 4 : améliorez le projet_
 
+Ouvrir la documentation utilisateur dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
 
-
+Ouvrir la documentation technique dans votre navigateur : 
 
