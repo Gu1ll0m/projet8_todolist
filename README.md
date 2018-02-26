@@ -33,7 +33,7 @@
 tests unitaires avec le framework[ __Jasmine__](https://github.com/jasmine/)
 
 
-Ouvrir dans votre navigateur le fichier[__SpecRunner.html__](./test/SpecRunner.html)
+Ouvrir dans votre navigateur le fichier [__SpecRunner.html__](./test/SpecRunner.html)
 
 Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js__](./test/ControllerSpec.js)
 
@@ -54,7 +54,7 @@ __Tests suivants ajouté =>__
 
 
 ### Etape 3 : optimisez la performance
-
+Ouvrir dans votre navigateur le fichier [__audit.md__](./livrable/audit.md)
 
 
 ### Etape 4 : améliorez le projet
