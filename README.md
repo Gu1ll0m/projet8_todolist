@@ -165,5 +165,5 @@ Ouvrir l' _audit de performance_ dans votre navigateur : [__audit.md__](./livrab
 
 Ouvrir la _documentation utilisateur_ dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
 
-Ouvrir la _documentation technique_ dans votre navigateur : 
+Ouvrir la _documentation technique_ dans votre navigateur : Télécharger [le dossier] (https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __index.html__ que vous trouverez en suivant le chemin suivant `../P8/js/out/SpecRunner.html`
 
