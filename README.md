@@ -1,5 +1,6 @@
 # Projet 8 : [Reprenez et améliorez un projet existant](https://openclassrooms.com/projects/reprenez-et-ameliorez-un-projet-existant)
 
+`Faire une description rapide du projet`
 
 Recap des  [__fichiers et fonctions__](./livrable/function_recap.pdf) de notre appli
 
