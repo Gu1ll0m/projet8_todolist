@@ -28,7 +28,9 @@ Les différentes image prennent un peu de temps à charger, amélioration possib
 
 ![img](audit_network_1.88ms.png)
 
-1,88 secondes pour afficher le squelette de l’ application. Pas extrêmement rapide pour des éléments de base. La console montre que c’est vraiment les PNG qui posent le plus problème.
+1,88 secondes pour afficher le squelette de l’ application. Pas extrêmement rapide pour des éléments de base. 
+
+La console montre que c’est vraiment les PNG qui posent le plus problème.
 
 ##### 5,91 secondes pour ce visuel:
 
@@ -43,7 +45,9 @@ Les différentes image prennent un peu de temps à charger, amélioration possib
 0,4 secondes pour l’ affichage des éléments todo, c’est plutôt rapide.
 
 On peut optimiser le temps de chargement en utilisant le cache pour les images.
+
 Les 2 fichiers les plus longs à chargés sont  le background (texture.png) et jQuery (jquery-ui.js).
+
 Le background peut-être optimisé (background repeat + fichier en SVG), jQuery intégré uniquement les fonctions utiles.
 
 ![img](audit_network_texture.png)
@@ -66,6 +70,7 @@ Avec l’ outil coverage on se rend compte par exemple que 75 % Jquery est non 
 ![img](audit_pwa.png)
 
 9 % de réussite, 10 tests ratés sur 11.
+
 Le site de notre concurrent n’est pas du tout orienté PWA, un point sur lequel nous avons une énorme marge de manœuvre.
 
 ##### 2-2-2- Performance
@@ -73,6 +78,7 @@ Le site de notre concurrent n’est pas du tout orienté PWA, un point sur leque
 ![img](audit_perf.png)
 
 42 % de test validé, application trop lente.
+
 Les PNG peuvent être amélioré (SVG, background repeat) tout comme certains fichier JS (utilisation de jquery).
 
 ##### 2-2-3- Accessibilité
@@ -89,6 +95,7 @@ Les PNG peuvent être amélioré (SVG, background repeat) tout comme certains fi
 ![img](audit_practice.png)
 
 Recommandations pour améliorer les performances et moderniser l’ application.
+
 56 %, grosse marge de progression ici également.
 * pas de HTTPS
 * 2 failles de sécurités dans les librairies front utilisés
