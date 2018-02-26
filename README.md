@@ -20,6 +20,7 @@ Le console.log donne une mauvaise info, il convient de mettre le console.log apr
 test via Jasmine => OK
 
 Ouvrir le fichier SpecRunner.html dans le dossier test.
+
 Les tests sont dans le fichier ControllerSpec.js.
 
 1. #62 => test si on affiche bien model et setview : OK
