@@ -44,7 +44,6 @@ Store.prototype.save (#76)
 		    		break;
 		  		}
 			}
-			console.log('id : ' + id);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
 		} else {
