@@ -15,7 +15,7 @@ Nous vous proposons donc de voir comment réaliser les actions suivantes :
 
 Notre application se présente de la façon suivante.
 
-![img](doc_utilisateur/creer_todo.png)
+![img](creer_todo.png)
 https://image.noelshack.com/fichiers/2018/06/2/1517918388-creer-todo.png
 
 Pour créer un Todo cliquer dans « what needs to be done ? » et écriver votre todo.
