@@ -118,19 +118,19 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 #### Récap des tests effectués :
 
-> 1. #62 => test si on affiche bien model et view : OK
-> 2. #92 => test la view quand on affiche les todos de l'onglet active : OK
-> 3. #114 => test la view quand on affiche les todos de l'onglet completed : OK
-> 4. #179 => test la view si "All" est surligné quand on a l' onglet par défaut : OK
-> 5. #189 => test la view si "Active" est surligné quand on change pour l'onglet active : OK
-> 6. #200 => test le model quand on bascule tous les états des todos vers terminé : OK
-> 7. #215 => test la mise à jour de view : OK
-> 8. #232=> test le model en cas d' ajout d'un todo : OK
-> 9. #281 => test le model si on supprime un todo : OK
+> 1. #62 => test si on affiche bien model et view
+> 2. #92 => test la view quand on affiche les todos de l'onglet active
+> 3. #114 => test la view quand on affiche les todos de l'onglet completed
+> 4. #179 => test la view si "All" est surligné quand on a l' onglet par défaut
+> 5. #189 => test la view si "Active" est surligné quand on change pour l'onglet active
+> 6. #200 => test le model quand on bascule tous les états des todos vers terminé
+> 7. #215 => test la mise à jour de view
+> 8. #232=> test le model en cas d' ajout d'un todo
+> 9. #281 => test le model si on supprime un todo
 
 #### Tests suivants ajoutés
 
-> 1. #103 => test le model quand on affiche les todos de l'onglet active : OK
+> 1. #103 => test le model quand on affiche les todos de l'onglet active
 
 	it('should show active entries to the model (NEW TEST)', function () {
 		// TODO : new test
@@ -142,7 +142,7 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 		expect(model.read).toHaveBeenCalledWith({completed: false}, jasmine.any(Function));
 	});
-> 2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
+> 2. #125 => test le model quand on affiche les todos de l'onglet completed
 	
 	it('should show completed entries to the model (NEW TEST)', function () {
 		// TODO : new test
