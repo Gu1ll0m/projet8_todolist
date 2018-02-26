@@ -8,7 +8,18 @@
 
 2. bug 2 : création des ID dans store.js => Store.prototype.save
 
-> La méthode Date.now() fonctionne, ça retourne le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 donc identifiant unique. Si énormément d' utilisateurs il faut un système de gestion de compte.
+> La méthode Date.now() fonctionne, ça retourne le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 donc identifiant unique.
+    var newId = Date.now();
+> Il convient de modifier également la boucle if suivante :
+    if (id) {
+          for (var i = 0; i < todos.length; i++) {
+              if (todos[i].id === id) {
+                for (var key in updateData) {
+                  todos[i][key] = updateData[key];
+                }
+                break;
+              }
+          }
 
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
 
