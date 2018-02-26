@@ -11,7 +11,7 @@ Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem_
 
 Store.prototype.save
 
-> La méthode [Date.now()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now) est parfaitement adapté, ça retourne un chiffre unique correspondant au nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00. Il s' agot donc de notre __identifiant unique__.
+> La méthode [Date.now()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now) est parfaitement adapté. La fonction retourne un chiffre unique correspondant au nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00. Il s' agit donc de notre __identifiant unique__.
 
     var newId = Date.now();
     
@@ -29,9 +29,9 @@ Store.prototype.save
 
 #### 3. amélioration : [__controller.js__](./js/controller.js)
 
-Controller.prototype.removeItem => la boucle forEach dans est inadapté.
+Controller.prototype.removeItem => la boucle forEach est inadapté.
 
-> Le console.log donne une mauvaise information, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
+> Le console.log donne une mauvaise information, il convient de mettre le console.log après le render plutôt qu' avant et de surrpimer la boucle forEach inutile.
 
 
 
@@ -45,10 +45,10 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 #### Récap des tests effectués :
 
-> 1. #62 => test si on affiche bien model et setview : OK
-> 2. #92 => test la view quand on affiche bien les todos de l'onglet active : OK
-> 3. #114 => test la view quand on affiche bien les todos de l'onglet completed : OK
-> 4. #179 => test la view si "All" est surligné quand on a l' onglet défaut : OK
+> 1. #62 => test si on affiche bien model et view : OK
+> 2. #92 => test la view quand on affiche les todos de l'onglet active : OK
+> 3. #114 => test la view quand on affiche les todos de l'onglet completed : OK
+> 4. #179 => test la view si "All" est surligné quand on a l' onglet par défaut : OK
 > 5. #189 => test la view si "Active" est surligné quand on change pour l'onglet active : OK
 > 6. #200 => test le model quand on bascule tous les états des todos vers terminé : OK
 > 7. #215 => test la mise à jour de view : OK
@@ -63,12 +63,12 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 ## _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
 
-Ouvrir l' audit dans votre navigateur : [__audit.md__](./livrable/audit.md)
+Ouvrir l' _audit de performance_ dans votre navigateur : [__audit.md__](./livrable/audit.md)
 
 
 ## _Etape 4 : améliorez le projet_
 
-Ouvrir la documentation utilisateur dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
+Ouvrir la _documentation utilisateur_ dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
 
-Ouvrir la documentation technique dans votre navigateur : 
+Ouvrir la _documentation technique_ dans votre navigateur : 
 
