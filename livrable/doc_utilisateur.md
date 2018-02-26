@@ -61,7 +61,7 @@ Nous avons créé 3 todos, notre second todo est terminé.
 
 Pour signifier que votre todo est terminé il suffit de cliquer dans le cercle à gauche du todo.
 
-Une fois fait le todo est barré et un bouton « Clear completed » apparaît en bas à droite. 
+Une fois fait le todo est barré et un bouton __Clear completed__ apparaît en bas à droite. 
 
 Ce bouton sert à effacé le todo que l’on a indiqué comme terminé.
 
@@ -70,29 +70,29 @@ Ce bouton sert à effacé le todo que l’on a indiqué comme terminé.
 
 1. ![img](doc_utilisateur_all_todo.png)
 
-Le bouton _All_ nous montre l’ ensemble des Todos quelques soit leur état.
+Le bouton __All__ nous montre l’ ensemble des Todos quelques soit leur état.
 
 2. ![img](doc_utilisateur_active_todo.png)
 
-Le bouton _Active_ nous montre les Todos en cours.
+Le bouton __Active__ nous montre les Todos en cours.
 
 3. ![img](doc_utilisateur_completed_todo.png)
 
-Le bouton _Completed_ quand à lui nous montre les todos que nous avons terminé.
+Le bouton __Completed__ quand à lui nous montre les todos que nous avons terminé.
 
 
 ## 5. Supprimer un ou plusieurs todos
 
 ![img](doc_utilisateur_clearcompleted_todo.png)
 
-Pour supprimer définitivement nos todos terminés, ceux que l’on retrouve dans l’onglet _Completed_, il suffit de cliquer sur le bouton _clear completed_ .
+Pour supprimer définitivement nos todos terminés, ceux que l’on retrouve dans l’onglet __Completed__, il suffit de cliquer sur le bouton __clear completed__ .
 
 Cette action effacera définitivement les todos en question.
 
 
 ![img](doc_utilisateur_croix_todo.png)
 
-Nous pouvons supprimer directement les todos un par un à la volée sans passé par l’onglet _Completed_. 
+Nous pouvons supprimer directement les todos un par un à la volée sans passé par l’onglet __Completed__. 
 
 Pour se faire lorsque l’on survol un todo avec notre sourie une croix à droite apparaît.
 
