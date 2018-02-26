@@ -4,7 +4,7 @@
 
 ### Etape 1 : Corrigez les bugs
 
-1. bug 1 : faute de frappe dans controller.js => Controller.prototype.addItem à la place de Controller.prototype.adddItem
+1. bug 1 : faute de frappe dans controller.js => Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__
 
 2. bug 2 : création des ID dans store.js => Store.prototype.save
 
@@ -12,14 +12,14 @@
 
 3. amélioration : boucle forEach inadapté => Controller.prototype.removeItem
 
-> Le console.log donne une mauvaise info, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
+> Le console.log donne une mauvaise information, il convient de mettre le console.log après le render et pas avant et surrpimer la boucle forEach inutile.
 
 
 ### Etape 2 : où sont les tests ?!
 
 test via Jasmine => OK
 
-Ouvrir le fichier SpecRunner.html dans le dossier test.
+Ouvrir le fichier __SpecRunner.html__ dans le dossier test.
 
 Les tests sont dans le fichier ControllerSpec.js.
 
