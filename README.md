@@ -7,11 +7,7 @@
 
 Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__ (#100)
 
-	/**
-	 * Evénement à déclencher lorsque vous souhaitez ajouter un élément. Il suffit de passer
-	 * dans l'objet événement et il va gérer l'insertion DOM et la sauvegarde du nouvel élément.
-	 * @param {string} (title) Le contenu du todo.
-	 */
+
 	Controller.prototype.addItem = function (title) {
 		var self = this;
 
@@ -31,13 +27,6 @@ Store.prototype.save (#76)
 
 > La méthode [Date.now()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now) est parfaitement adapté. La fonction retourne un chiffre unique correspondant au nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00. Il s' agit donc de notre __identifiant unique__.
 
-    /**
-	 * Sauvegarde les données données dans la base de données. Si aucun élément n'existe, un nouveau élément
-	 *  sera créé, sinon une mise à jour des propriétés de l' élément existant sera réalisé
-	 * @param {object} (updateData) Les données à sauvegarder dans la base de données
-	 * @param {function} (callback) La fonction de rappel après l'enregistrement
-	 * @param {number} (id) Un paramètre facultatif pour entrer un ID d'un élément à mettre à jour
-	 */
 	Store.prototype.save = function (updateData, callback, id) {
         var data = JSON.parse(localStorage[this._dbName]);
         var todos = data.todos;
@@ -84,10 +73,6 @@ Controller.prototype.removeItem => la boucle forEach est inadapté.
 
 > Le console.log donne une mauvaise information, il convient de mettre le console.log après le render plutôt qu' avant et de surrpimer la boucle forEach inutile.
 
-    /**
-	 * Supprime un élément de la liste.
-	 * @param {number} (id) L'ID de l'élément à retirer du DOM et du stockage.
-	 */
 	Controller.prototype.removeItem = function (id) {
 		var self = this;
 		var items;
@@ -133,7 +118,6 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 > 1. #103 => test le model quand on affiche les todos de l'onglet active
 
 	it('should show active entries to the model (NEW TEST)', function () {
-		// TODO : new test
 		// test le model
 		var todo = {title: 'my todo', completed: false};
 		setUpModel([todo]);
@@ -142,10 +126,10 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 		expect(model.read).toHaveBeenCalledWith({completed: false}, jasmine.any(Function));
 	});
+	
 > 2. #125 => test le model quand on affiche les todos de l'onglet completed
 	
 	it('should show completed entries to the model (NEW TEST)', function () {
-		// TODO : new test
 		// test le model
 		var todo = {title: 'my todo', completed: true};
 		setUpModel([todo]);
