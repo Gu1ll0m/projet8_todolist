@@ -98,16 +98,16 @@ Recommandations pour améliorer les performances et moderniser l’ application.
 
 ![img](audit_notre_app.png)
 
-1. Amélioration possible du PWA :
-* simple comme <meta name= «theme-color »>
+##### 1. Amélioration possible du PWA :
+* simple comme 'meta name= «theme-color »'
 * gestion du offline avec un splashscreen...
 
-2. Performance : OK
+##### 2. Performance : OK
 
-3. Bonnes pratiques : 4 tests ratés sur 12. A vérifier.
+##### 3. Bonnes pratiques : 4 tests ratés sur 12. A vérifier.
 
-4. Accessibilité :
-* label : <input class="new-todo" placeholder="What needs to be done?" autofocus>
+##### 4. Accessibilité :
+* label : 'input class="new-todo" placeholder="What needs to be done?" autofocus'
 * amélioration du contraste entre le 1er plan et le fond d’ écran
 
 ### 4- Scalling :
@@ -128,11 +128,4 @@ Fonctionnalité que l’on pourrait éventuellement intégré à notre applicati
 3. Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait
 4. La temporalité et les catégories de listes pourraient être intégrés ?
 
-        | Application de notre concurrent                | Notre application                                         |
-        | :--------------------------------------------: |: -------------------------------------------------------: |
-        | 1 Lente, pas optimisé                          |1 Rapide, optimisé et performante                          |
-        | 2 pas orienté PWA                              |2 PWA améliorable, axe d’ amélioration évident             |
-        | 3 Accessibilité correcte                       |3 Bonne accessibilité, amélioration via <label> et         |               |                                                |contrastes pour que ce soit parfait                        |
-        | 4 Design discutable, quelques fonctionnalités  |4 La temporalité et les catégories de listes pourraient    |
-        |intéressantes                                   |être intégrés ?|
-    
+
