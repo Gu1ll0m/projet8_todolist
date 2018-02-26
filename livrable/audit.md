@@ -56,10 +56,10 @@ Avec l’ outil coverage on se rend compte par exemple que 75 % Jquery est non 
 
 #### 2-2- Outil « audit »
 4 catégories :
-- Progressive Web App
-- Performance
-- Accessibilité
-- Bonnes pratiques
+* Progressive Web App
+* Performance
+* Accessibilité
+* Bonnes pratiques
 
 ##### 2-2-1- Progressive Web App
 
@@ -80,9 +80,9 @@ Les PNG peuvent être amélioré (SVG, background repeat) tout comme certains fi
 ![img](audit_accessibilite.png)
 
 83 % de réussite, quelques points d’ amélioration comme :
-- ajouter un attribut alt pour les images
-- accentuer plus les contrastes
-- ajouter un attribut lang dans le HTML
+* ajouter un attribut alt pour les images
+* accentuer plus les contrastes
+* ajouter un attribut lang dans le HTML
 
 ##### 2-2-4- Bonnes pratiques
 
@@ -90,30 +90,30 @@ Les PNG peuvent être amélioré (SVG, background repeat) tout comme certains fi
 
 Recommandations pour améliorer les performances et moderniser l’ application.
 56 %, grosse marge de progression ici également.
-- pas de HTTPS
-- 2 failles de sécurités dans les librairies front utilisés
-- présences de deux erreurs dans la console
+* pas de HTTPS
+* 2 failles de sécurités dans les librairies front utilisés
+* présences de deux erreurs dans la console
 
 ### 3- Comparaison avec notre application
 
 ![img](audit_notre_app.png)
 
 1. Amélioration possible du PWA :
-- simple comme <meta name= «theme-color »>
-- gestion du offline avec un splashscreen...
+* simple comme <meta name= «theme-color »>
+* gestion du offline avec un splashscreen...
 
 2. Performance : OK
 
 3. Bonnes pratiques : 4 tests ratés sur 12. A vérifier.
 
 4. Accessibilité :
-- label : <input class="new-todo" placeholder="What needs to be done?" autofocus>
-- amélioration du contraste entre le 1er plan et le fond d’ écran
+* label : <input class="new-todo" placeholder="What needs to be done?" autofocus>
+* amélioration du contraste entre le 1er plan et le fond d’ écran
 
 ### 4- Scalling :
 Fonctionnalité que l’on pourrait éventuellement intégré à notre application :
-1. temporalité
-2. catégories de liste
+* temporalité
+* catégories de liste
 
 ### 5- Résumé
 ##### Application de notre concurrent :
@@ -128,15 +128,11 @@ Fonctionnalité que l’on pourrait éventuellement intégré à notre applicati
 3. Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait
 4. La temporalité et les catégories de listes pourraient être intégrés ?
 
-        | Application de notre concurrent | Notre application |
-        | :---------------------------------: |: -----------------------------------------------------: |
-        | 1 Lente, pas optimisé |1 Rapide, optimisé et performante|
-        | 2 pas orienté PWA |2 PWA améliorable, axe d’ amélioration évident|
-        | 3 Accessibilité correcte |3 Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait|
-        | 4 Design discutable, quelques fonctionnalités intéressantes |La temporalité et les catégories de listes pourraient    être intégrés ?|
+        | Application de notre concurrent                | Notre application                                         |
+        | :--------------------------------------------: |: -------------------------------------------------------: |
+        | 1 Lente, pas optimisé                          |1 Rapide, optimisé et performante                          |
+        | 2 pas orienté PWA                              |2 PWA améliorable, axe d’ amélioration évident             |
+        | 3 Accessibilité correcte                       |3 Bonne accessibilité, amélioration via <label> et         |               |                                                |contrastes pour que ce soit parfait                        |
+        | 4 Design discutable, quelques fonctionnalités  |4 La temporalité et les catégories de listes pourraient    |
+        |intéressantes                                   |être intégrés ?|
     
-        | Les tableaux  | C'est            | Cool  |
-        | ------------- |:----------------:| -----:|
-        | 3e colonne est| alignée à droite | 1600€ |
-        | 2e colonne est| centrée          |   12€ |
-        | zebra stripes | are neat         |    1€ |
