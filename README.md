@@ -7,7 +7,7 @@ Recap des  [__fichiers et fonctions__](./livrable/function_recap.pdf) de notre a
 
 #### 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js)
 
-Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__ (#100)
+Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__ 
 
 
 	Controller.prototype.addItem = function (title) {
@@ -25,7 +25,7 @@ Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem_
 
 #### 2. bug 2 : création des ID dans [__store.js__](./js/store.js)
 
-Store.prototype.save (#76)
+Store.prototype.save
 
 > La méthode [Date.now()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now) est parfaitement adapté. La fonction retourne un chiffre unique correspondant au nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00. Il s' agit donc de notre __identifiant unique__.
 
