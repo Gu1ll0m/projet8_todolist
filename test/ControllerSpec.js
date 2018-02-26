@@ -177,8 +177,7 @@ describe('controller', function () {
 
 	it('should highlight "All" filter by default', function () {
 		// TODO: write test
-		var todo = {id: 42, title: 'my todo'};
-		setUpModel([todo]);
+		setUpModel([]);
 
 		subject.setView('');
 
@@ -187,8 +186,7 @@ describe('controller', function () {
 
 	it('should highlight "Active" filter when switching to active view', function () {
 		// TODO: write test
-		var todo = {id: 42, title: 'my todo', completed: true};
-		setUpModel([todo]);
+		setUpModel([]);
 
 		subject.setView('#/active');
 
@@ -199,7 +197,7 @@ describe('controller', function () {
 		it('should toggle all todos to completed', function () {
 			// TODO: write test
 			var todo = [{id: 42, title: 'my todo', completed: false},
-						{id: 43, title: 'my todo', completed: false}
+						{id: 43, title: 'another todo', completed: false}
 						]
 			setUpModel(todo);
 
@@ -214,7 +212,7 @@ describe('controller', function () {
 		it('should update the view', function () {
 			// TODO: write test
 			var todo = [{id: 42, title: 'my todo', completed: false},
-						{id: 43, title: 'my todo', completed: false}
+						{id: 43, title: 'another todo', completed: false}
 						]
 			setUpModel([todo]);
 
@@ -223,6 +221,8 @@ describe('controller', function () {
 			view.trigger('toggleAll', {id: 42, completed: true});
 			view.trigger('toggleAll', {id: 43, completed: true});
 
+			view.trigger('toggleAll', {completed: false});
+
 			expect(view.render).toHaveBeenCalledWith('updateElementCount', 1);
 		});
 	});
@@ -230,8 +230,7 @@ describe('controller', function () {
 	describe('new todo', function () {
 		it('should add a new todo to the model', function () {
 			// TODO: write test
-			var todo = {title: 'my todo', completed: false}
-			setUpModel([todo]);
+			setUpModel([]);
 
 			subject.setView('');
 
@@ -279,7 +278,7 @@ describe('controller', function () {
 	describe('element removal', function () {
 		it('should remove an entry from the model', function () {
 			// TODO: write test
-			var todo = {id: 42, title: 'my todo', completed: false};
+			var todo = {id: 42, title: 'my todo', completed: true};
 			setUpModel([todo]);
 
 			subject.setView('');
