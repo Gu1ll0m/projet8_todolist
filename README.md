@@ -99,9 +99,9 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 > 2. #92 => test la view quand on affiche les todos de l'onglet active
 > 3. #114 => test la view quand on affiche les todos de l'onglet completed
 > 4. #179 => test la view si "All" est surligné quand on a l' onglet par défaut
-> 5. #189 => test la view si "Active" est surligné quand on change pour l'onglet active
-> 6. #200 => test le model quand on bascule tous les états des todos vers terminé
-> 7. #215 => test la mise à jour de view
+> 5. #188 => test la view si "Active" est surligné quand on change pour l'onglet active
+> 6. #198 => test le model quand on bascule tous les états des todos vers terminé
+> 7. #213 => test la mise à jour de view
 > 8. #232=> test le model en cas d' ajout d'un todo
 > 9. #281 => test le model si on supprime un todo
 
