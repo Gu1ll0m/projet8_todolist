@@ -32,13 +32,15 @@ Store.prototype.save
 > Il s' agit donc de notre __identifiant unique__.
 
 	Store.prototype.save = function (updateData, callback, id) {
-        var data = JSON.parse(localStorage[this._dbName]);
-        var todos = data.todos;
+        	var data = JSON.parse(localStorage[this._dbName]);
+        	var todos = data.todos;
 
-        callback = callback || function () {};
+        	callback = callback || function () {};
 
-		var newId = Date.now();
-
+		/**
+		 * Si un ID a été donné, trouve l'élément et met à jour les propriétés
+		 * @param  {number} (id) L' ID de l' élément.
+		 */
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
 		  		if (todos[i].id === id) {
@@ -51,12 +53,19 @@ Store.prototype.save
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
 		} else {
-			updateData.id = parseInt(newId);
+  			/**
+			 * Génére un identifiant unique
+			 * @see  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now
+			 * @example
+			 * returns {number} 1519326977765
+			 */
+			updateData.id = Date.now();
+			console.log('id create : ' + updateData.id);
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, [updateData]);
 		}
-    };
+    	};
 
 #### 3. amélioration : [__controller.js__](./js/controller.js)
 
