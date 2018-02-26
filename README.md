@@ -2,7 +2,6 @@
 
 
 
-
 ### _Etape 1 : Corrigez les bugs_
 
 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js) => Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__
