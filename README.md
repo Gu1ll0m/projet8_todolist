@@ -144,13 +144,13 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 ## _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
 
-Ouvrir l' _audit de performance_ dans votre navigateur : [__audit.md__](./livrable/audit.md)
+Ouvrir l' _audit de performance_ dans votre navigateur : [__audit de performance_](./livrable/audit.md)
 
 
 ## _Etape 4 : améliorez le projet_
 
-Ouvrir la _documentation utilisateur_ dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
+Ouvrir la _documentation utilisateur_ dans votre navigateur : [__documentation utilisateur__](./livrable/doc_utilisateur.md)
 
-Ouvrir la _documentation technique_ dans votre navigateur : [__doc_technique__](https://gu1ll0m.github.io/projet8_todolist/)
+Ouvrir la _documentation technique_ dans votre navigateur : [__documentation_technique__](https://gu1ll0m.github.io/projet8_todolist/)
 
 
