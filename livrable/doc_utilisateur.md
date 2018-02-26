@@ -32,7 +32,7 @@ Votre todo apparaît dans la liste des todos.
 
 Plusieurs éléments sont apparus :
 + un icône à gauche de « what needs to be done ? »
-+ une indication du nombre de todos, ici « 1 item left »
++ une indication du nombre de todos, ici _1 item left_
 + un onglet __all__
 + un onglet __active__
 + un onglet __completed__
