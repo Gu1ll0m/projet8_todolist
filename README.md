@@ -112,7 +112,7 @@ Pré-requis :
 * installer NPM [NPM et NodeJs](https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm)
 * installer [ __Jasmine__](https://github.com/jasmine/jasmine/releases)
 
-Télécharger [le dossier] (https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __SpecRunner.html__ que vous trouverez en suivant le chemin suivant `../P8/test/SpecRunner.html`
+Télécharger [le dossier](https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __SpecRunner.html__ que vous trouverez en suivant le chemin suivant `../P8/test/SpecRunner.html`
 
 Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js__](./test/ControllerSpec.js)
 
@@ -165,5 +165,5 @@ Ouvrir l' _audit de performance_ dans votre navigateur : [__audit.md__](./livrab
 
 Ouvrir la _documentation utilisateur_ dans votre navigateur : [__doc_utilisateur.md__](./livrable/doc_utilisateur.md)
 
-Ouvrir la _documentation technique_ dans votre navigateur : Télécharger [le dossier] (https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __index.html__ que vous trouverez en suivant le chemin suivant `../P8/js/out/SpecRunner.html`
+Ouvrir la _documentation technique_ dans votre navigateur : Télécharger [le dossier](https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __index.html__ que vous trouverez en suivant le chemin suivant `../P8/js/out/SpecRunner.html`
 
