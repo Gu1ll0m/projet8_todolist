@@ -1,7 +1,7 @@
 # Projet 8 : [Reprenez et améliorez un projet existant](https://openclassrooms.com/projects/reprenez-et-ameliorez-un-projet-existant)
 
 
-Recap des  [__fonctions__](./livrable/function_recap.pdf) de notre appli
+Recap des  [__fichiers et fonctions__](./livrable/function_recap.pdf) de notre appli
 
 ## _Etape 1 : Corrigez les bugs_
 
