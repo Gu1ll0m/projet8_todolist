@@ -2,7 +2,7 @@
 
 
 
-### _Etape 1 : Corrigez les bugs_
+## _Etape 1 : Corrigez les bugs_
 
 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js) => Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__
 
@@ -31,7 +31,7 @@
 
 
 
-### _Etape 2 : où sont les tests ?!_
+## _Etape 2 : où sont les tests ?!_
 
 tests unitaires avec le framework[ __Jasmine__](https://github.com/jasmine/)
 
@@ -58,14 +58,14 @@ __Tests suivants ajouté =>__
 
 
 
-### _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
+## _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
 
 Ouvrir dans votre navigateur le fichier [__audit.md__](./livrable/audit.md)
 
 
 
 
-### _Etape 4 : améliorez le projet_
+## _Etape 4 : améliorez le projet_
 
 
 
