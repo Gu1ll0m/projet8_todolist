@@ -98,16 +98,18 @@ Recommandations pour améliorer les performances et moderniser l’ application.
 
 ![img](audit_notre_app.png)
 
-##### 1. Amélioration possible du PWA :
-* simple comme 'meta name= «theme-color »'
+#### 3-1. Amélioration possible du PWA
+* simple comme `meta name= «theme-color »`
 * gestion du offline avec un splashscreen...
 
-##### 2. Performance : OK
+#### 3-2. Performance 
+OK
 
-##### 3. Bonnes pratiques : 4 tests ratés sur 12. A vérifier.
+#### 3-3. Bonnes pratiques 
+4 tests ratés sur 12. A vérifier.
 
-##### 4. Accessibilité :
-* label : 'input class="new-todo" placeholder="What needs to be done?" autofocus'
+#### 3-4. Accessibilité
+* label : `input class="new-todo" placeholder="What needs to be done?" autofocus`
 * amélioration du contraste entre le 1er plan et le fond d’ écran
 
 ### 4- Scalling :
