@@ -71,21 +71,14 @@
 	 *  sera créé, sinon une mise à jour des propriétés de l' élément existant sera réalisé
 	 * @param {object} (updateData) Les données à sauvegarder dans la base de données
 	 * @param {function} (callback) La fonction de rappel après l'enregistrement
-	 * @param {number} (id) Un paramètre facultatif pour entrer un ID d'un élément à mettre à jour
+	 * @param {number} (id) Un paramètre facultatif correspondantà l' identifiant d'un élément
+	 *                      à mettre à jour
 	 */
 	Store.prototype.save = function (updateData, callback, id) {
         var data = JSON.parse(localStorage[this._dbName]);
         var todos = data.todos;
 
         callback = callback || function () {};
-
-		/**
-		 * Génére un identifiant unique
-		 * @see  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now
-		 * @example
-		 * returns {number} 1519326977765
-		 */
-		var newId = Date.now();
 
 		/**
 		 * Si un ID a été donné, trouve l'élément et met à jour les propriétés
@@ -104,9 +97,14 @@
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
 		} else {
-		  	// Attribue un ID
-			updateData.id = parseInt(newId);
-			console.log('id : ' + newId);
+  			/**
+			 * Génére un identifiant unique
+			 * @see  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/now
+			 * @example
+			 * returns {number} 1519326977765
+			 */
+			updateData.id = Date.now();
+			console.log('id : ' + updateData.id);
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, [updateData]);
