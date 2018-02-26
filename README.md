@@ -3,11 +3,11 @@
 
 ## _Etape 1 : Corrigez les bugs_
 
-### 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js)
+#### 1. bug 1 : faute de frappe dans [__controller.js__](./js/controller.js)
 
 Controller.prototype.__addItem__ à la place de Controller.prototype.__adddItem__
 
-### 2. bug 2 : création des ID dans [__store.js__](./js/store.js)
+#### 2. bug 2 : création des ID dans [__store.js__](./js/store.js)
 
 Store.prototype.save
 
@@ -27,7 +27,7 @@ Store.prototype.save
               }
           }
 
-### 3. amélioration : [__controller.js__](./js/controller.js)
+#### 3. amélioration : [__controller.js__](./js/controller.js)
 
 Controller.prototype.removeItem => la boucle forEach dans est inadapté.
 
@@ -43,7 +43,7 @@ Ouvrir dans votre navigateur le fichier [__SpecRunner.html__](./test/SpecRunner.
 
 Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js__](./test/ControllerSpec.js)
 
-### Récap des tests effectués :
+#### Récap des tests effectués :
 
 > 1. #62 => test si on affiche bien model et setview : OK
 > 2. #92 => test la view quand on affiche bien les todos de l'onglet active : OK
@@ -55,7 +55,7 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 > 8. #232=> test le model en cas d' ajout d'un todo : OK
 > 9. #281 => test le model si on supprime un todo : OK
 
-### Tests suivants ajoutés
+#### Tests suivants ajoutés
 
 > 1. #103 => test le model quand on affiche les todos de l'onglet active : OK
 > 2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
