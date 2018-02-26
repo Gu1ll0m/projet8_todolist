@@ -33,7 +33,7 @@
 
 test via Jasmine => OK
 
-Ouvrir le fichier __SpecRunner.html__ dans le dossier test.
+Ouvrir le fichier [__SpecRunner.html__](../test/SpecRunner.html)
 
 Les tests sont dans le fichier ControllerSpec.js.
 
