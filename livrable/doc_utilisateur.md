@@ -33,9 +33,9 @@ Votre todo apparaît dans la liste des todos.
 Plusieurs éléments sont apparus :
 + un icône à gauche de « what needs to be done ? »
 + une indication du nombre de todos, ici « 1 item left »
-+ un onglet «all »
-+ un onglet « active »
-+ un onglet « completed »
++ un onglet __all__
++ un onglet __active__
++ un onglet __completed__
 
 Voyons maintenant comment modifier un todo.
 
