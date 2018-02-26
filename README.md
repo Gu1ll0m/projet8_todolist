@@ -110,7 +110,7 @@ Controller.prototype.removeItem => la boucle forEach est inadapté.
 Tests unitaires avec le framework[ __Jasmine__](https://github.com/jasmine/)
 Pré-requis : 
 * installer NPM [NPM et NodeJs](https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm)
-* installer Jasmine [ __Jasmine__](https://github.com/jasmine/jasmine/releases)
+* installer [ __Jasmine__](https://github.com/jasmine/jasmine/releases)
 
 Télécharger [le dossier] (https://github.com/Gu1ll0m/projet8_todolist.git) puis ouvrir dans votre navigateur le fichier __SpecRunner.html__ que vous trouverez en suivant le chemin suivant `../P8/test/SpecRunner.html`
 
@@ -131,7 +131,29 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 #### Tests suivants ajoutés
 
 > 1. #103 => test le model quand on affiche les todos de l'onglet active : OK
+
+	it('should show active entries to the model (NEW TEST)', function () {
+		// TODO : new test
+		// test le model
+		var todo = {title: 'my todo', completed: false};
+		setUpModel([todo]);
+
+		subject.setView('#/active');
+
+		expect(model.read).toHaveBeenCalledWith({completed: false}, jasmine.any(Function));
+	});
 > 2. #125 => test le model quand on affiche les todos de l'onglet completed : OK
+	
+	it('should show completed entries to the model (NEW TEST)', function () {
+		// TODO : new test
+		// test le model
+		var todo = {title: 'my todo', completed: true};
+		setUpModel([todo]);
+
+		subject.setView('#/completed');
+
+		expect(model.read).toHaveBeenCalledWith({completed: true}, jasmine.any(Function));
+	})
 
 
 ## _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
