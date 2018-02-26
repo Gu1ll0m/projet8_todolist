@@ -106,7 +106,7 @@
 		} else {
 		  	// Attribue un ID
 			updateData.id = parseInt(newId);
-			console.log('id : ' + newId + ' ok');
+			console.log('id : ' + newId);
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, [updateData]);
