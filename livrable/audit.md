@@ -134,7 +134,7 @@ Fonctionnalité que l’on pourrait éventuellement intégré à notre applicati
 ##### Notre application :
 1. Rapide, optimisé et performante
 2. PWA améliorable, axe d’ amélioration évident
-3. Bonne accessibilité, amélioration via <label> et contrastes pour que ce soit parfait
+3. Bonne accessibilité, amélioration via `label` et contrastes pour que ce soit parfait
 4. La temporalité et les catégories de listes pourraient être intégrés ?
 
 
