@@ -79,7 +79,7 @@ Store.prototype.save
 
 #### 3. amélioration : [__controller.js__](./js/controller.js)
 
-Controller.prototype.removeItem => la boucle forEach est inadapté.
+Controller.prototype.removeItem => la boucle forEach est inadaptée.
 
 > Le console.log donne une mauvaise information, il convient de mettre le console.log après le render plutôt qu' avant et de surrpimer la boucle forEach inutile.
 
