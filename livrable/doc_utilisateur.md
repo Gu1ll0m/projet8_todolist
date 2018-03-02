@@ -2,7 +2,7 @@
 
 Notre application a pour objectif de vous permettre très facilement de créer des todos-list.
 
-Pour ce faire nous avons élaborer des fonctions permettant de créer, de modifier ou supprimer des éléments.
+Pour ce faire nous avons élaboré des fonctions permettant de créer, de modifier ou supprimer des éléments.
 
 Notre application doit être utilisable par tous, de 7 à 77 ans, sur tout type de support (ordinateur, tablette, smartphone,…).
 
