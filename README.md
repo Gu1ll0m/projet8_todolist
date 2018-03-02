@@ -4,7 +4,7 @@ Amélioration d'un projet existant de todo-list en vanillaJS.
 
 Le projet comporte quelques bugs à __identifier et corriger__, quelques __optimisations__ possibles à intégrer.
 
-Les tests unitaires sont a améliorer en utilisant le framework __Jasmine__.
+Les tests unitaires sont à améliorer en utilisant le framework __Jasmine__.
 
 Un audit de performance est attendu sur un site concurrent à notre application, la mise en évidence de certaines fonctionnalités intéressantes est attendue.
 
