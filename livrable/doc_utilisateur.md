@@ -20,7 +20,7 @@ Notre application se présente de la façon suivante.
 
 ![img](doc_utilisateur_creer_todo.png)
 
-Pour créer un Todo cliquer dans « what needs to be done ? » et écriver votre todo.
+Pour créer un Todo cliquer dans « what needs to be done ? » et rédiger votre todo.
 
 Appuyer sur _entrée_ pour enregistrer le todo.
 
@@ -48,7 +48,7 @@ Afin d’ avoir l’ application la plus simple à utiliser nous avons choisit d
 
 Taper sur _Entrée_ pour valider la modification ou sur _échap_ pour l' annuler.
 
-Le todo que vous modifié est encadré.
+Le todo que vous modifiez est encadré.
 
 Voyons  maintenant comment modifier l’ état d’ avancement d’un todo.
 
@@ -63,7 +63,7 @@ Pour signifier que votre todo est terminé il suffit de cliquer dans le cercle �
 
 Une fois fait le todo est barré et un bouton __Clear completed__ apparaît en bas à droite. 
 
-Ce bouton sert à effacé le todo que l’on a indiqué comme terminé.
+Ce bouton sert à effacer le todo que l’on a indiqué comme terminé.
 
 
 ## 4. Voir l’état de nos todos
@@ -92,11 +92,13 @@ Cette action effacera définitivement les todos en question.
 
 ![img](doc_utilisateur_croix_todo.png)
 
-Nous pouvons supprimer directement les todos un par un à la volée sans passé par l’onglet __Completed__. 
+Nous pouvons supprimer directement les todos un par un à la volée sans passer par l’onglet __Completed__. 
 
-Pour se faire lorsque l’on survol un todo avec notre sourie une croix à droite apparaît.
+Pour se faire lorsque l’on survole un todo avec notre souris une croix à droite apparaît.
 
-Cliquer sur la croix supprime définitivement le todo en question. Pas de retour en arrière possible.
+Cliquer sur la croix supprime définitivement le todo en question. 
+
+Pas de retour en arrière possible.
 
 
 
