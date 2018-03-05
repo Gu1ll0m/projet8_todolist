@@ -149,20 +149,7 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 
 		expect(model.read).toHaveBeenCalledWith({completed: true}, jasmine.any(Function));
 	})
-	
-> 3. #335 => test la mise à jour du compteur lors de la suppression d' élément
 
-	it('should update the element count (NEW TEST)', function () {
-		// test updateElementCount et removeCompleted
-		var todo = {id: 42, title: 'my todo', completed: true};
-		setUpModel([todo]);
-
-		subject.setView('');
-
-		view.trigger('removeCompleted', {id: 42});
-
-		expect(view.render).toHaveBeenCalledWith('updateElementCount', 0);
-	});
 
 
 ## _Etape 3 : optimisez la performance du site [todolistme.net](http://todolistme.net/)_
