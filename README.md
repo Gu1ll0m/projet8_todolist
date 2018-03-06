@@ -124,7 +124,7 @@ Pour voir plus en détails les tests aller dans le fichier [__ControllerSpec.js_
 > 8. #232=> test le model en cas d' ajout d'un todo
 > 9. #281 => test le model si on supprime un todo
 
-#### Tests suivants ajoutés
+#### Tests suivants ajoutés :
 
 > 1. #103 => test le model quand on affiche les todos de l'onglet active
 
