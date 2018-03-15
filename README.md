@@ -8,9 +8,9 @@ Les tests unitaires sont à améliorer en utilisant le framework __Jasmine__.
 
 Un audit de performance est attendu sur un site concurrent à notre application, la mise en évidence de certaines fonctionnalités intéressantes est attendue.
 
-![img](screenshotP8.png)
-
 Enfin une documentation utilisateur ainsi qu'une documentation technique sont attendues.
+
+![img](screenshotP8.png)
 
 
 Recap des  [__fichiers et fonctions__](./livrable/function_recap.pdf) de notre appli
